@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" stylesheets="@WelcomeWindowCSS.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.WelcomeWindowController">
+   <children>
+      <Label fx:id="lbl1" layoutX="101.0" layoutY="84.0" text="Hello!" />
+      <Label fx:id="lbl2" layoutX="133.0" layoutY="160.0" text="Are you a student or a teacher?" />
+      <HBox fx:id="hbox1" layoutX="-1.0" layoutY="300.0" prefHeight="100.0" prefWidth="600.0">
+         <children>
+            <Button fx:id="btn_student" mnemonicParsing="false" text="Student" />
+            <Button fx:id="btn_teacher" mnemonicParsing="false" text="Teacher" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
