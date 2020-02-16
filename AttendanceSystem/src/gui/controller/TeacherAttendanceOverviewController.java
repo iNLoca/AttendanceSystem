@@ -12,6 +12,9 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
+import javafx.scene.control.TableView;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.shape.Rectangle;
 
 /**
  * FXML Controller class
@@ -25,18 +28,53 @@ public class TeacherAttendanceOverviewController implements Initializable {
     @FXML
     private Label reasonForAbsence;
     @FXML
+    private Button exit;
+    @FXML
     private Label percentageOfAbsence;
     @FXML
     private Label teacherName;
     @FXML
-    private Button exit;
+    private AnchorPane pane;
+    @FXML
+    private Label className;
+    @FXML
+    private TableView<?> students;
+    @FXML
+    private Label text2;
+    @FXML
+    private Label text1;
+    @FXML
+    private Label text3;
+    @FXML
+    private Label lblStatus;
+    @FXML
+    private Rectangle rectangle;
 
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        calendar.show();
+        text1.getStyleClass().add("text1");
+        text2.getStyleClass().add("text2");
+        text3.getStyleClass().add("text3");
+        text3.setId("text3");
+        calendar.getStyleClass().add("calendar");
+        exit.getStyleClass().add("exit");
+        exit.setId("exit");
+        reasonForAbsence.getStyleClass().add("reasonForAbsence");
+        reasonForAbsence.setId("reasonForAbsence");
+        lblStatus.getStyleClass().add("lblStatus");
+        lblStatus.setId("lblStatus");
+        rectangle.getStyleClass().add("rectangle");
+        rectangle.setId("rectangle");
+       
+        percentageOfAbsence.getStyleClass().add("percentageOfAbsence");
+        teacherName.getStyleClass().add("teacherName");
+        className.getStyleClass().add("className");
+        className.setId("className");
+        students.getStyleClass().add("students");
+        teacherName.setId("teacherName");
     }    
     
 }
