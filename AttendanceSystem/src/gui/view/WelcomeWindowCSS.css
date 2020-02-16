@@ -11,18 +11,30 @@ and open the template in the editor.
 
 .root{
     -fx-background-color: aquamarine;
+
 }        
 
 .button{    
     -fx-background-color: lightgreen;
     -fx-cursor: hand;
     -fx-text-fill: #000;
-    -fx-padding: 13px 20px;
+    -fx-padding: 5px;
     -fx-font-size: 18px;
     -fx-font-family: helvetica;
-    -fx-border-style: dotted;
-    -fx-border-width: 5;  
-    -fx-border-color: blue;
+    -fx-border-width: 2;  
+    -fx-border-color: #000;
+  /*-fx-border-style: dotted;*/
+}
+
+.button:hover{
+  -fx-background-color: #4CAF50;
+  -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);
+}
+
+#btn_close{
+    -fx-padding: 5px 10px;
+    -fx-font-size: 14px;
+
 }
 
 .label
