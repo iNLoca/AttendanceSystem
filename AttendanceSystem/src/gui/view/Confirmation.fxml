@@ -12,8 +12,8 @@
    <children>
       <Button fx:id="btn_close" layoutX="526.0" layoutY="349.0" mnemonicParsing="false" text="Close" AnchorPane.bottomAnchor="7.0" AnchorPane.rightAnchor="7.0" />
       <Button fx:id="btn_view_overall_attendance" layoutX="196.0" layoutY="280.0" mnemonicParsing="false" text="View Overall Attendance" AnchorPane.leftAnchor="196.0" AnchorPane.rightAnchor="195.0" />
-      <Label fx:id="lbl3" contentDisplay="CENTER" layoutX="240.0" layoutY="74.0" prefHeight="30.0" prefWidth="120.0" text="THANK YOU!" />
-      <Label fx:id="lbl5" contentDisplay="CENTER" layoutX="227.0" layoutY="185.0" prefHeight="30.0" prefWidth="147.0" text="Have a nice day" textAlignment="CENTER" />
+      <Label fx:id="lbl3" contentDisplay="CENTER" layoutX="186.0" layoutY="56.0" prefHeight="36.0" prefWidth="228.0" text="THANK YOU!" />
+      <Label fx:id="lbl5" contentDisplay="CENTER" layoutX="204.0" layoutY="185.0" prefHeight="30.0" prefWidth="193.0" text="Have a nice day" textAlignment="CENTER" />
       <Label fx:id="lbl4" contentDisplay="CENTER" layoutX="143.0" layoutY="132.0" text="Your attendance has been recorded" textAlignment="CENTER" />
    </children>
 </AnchorPane>
