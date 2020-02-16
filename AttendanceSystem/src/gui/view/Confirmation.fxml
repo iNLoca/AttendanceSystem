@@ -13,9 +13,11 @@
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#a6000f" height="100.0" stroke="BLACK" strokeType="INSIDE" width="600.0" />
       <Button fx:id="btn_close" layoutX="526.0" layoutY="349.0" mnemonicParsing="false" text="Close" AnchorPane.bottomAnchor="7.0" AnchorPane.rightAnchor="7.0" />
+
       <Button fx:id="btn_view_overall_attendance" layoutX="186.0" layoutY="279.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="228.0" text="View Overall Attendance" AnchorPane.leftAnchor="186.0" AnchorPane.rightAnchor="186.0" />
       <Label fx:id="lbl3" contentDisplay="CENTER" layoutX="236.0" layoutY="43.0" prefHeight="30.0" prefWidth="129.0" text="THANK YOU!" />
       <Label fx:id="lbl5" contentDisplay="CENTER" layoutX="227.0" layoutY="185.0" prefHeight="30.0" prefWidth="157.0" text="Have a nice day" textAlignment="CENTER" />
+
       <Label fx:id="lbl4" contentDisplay="CENTER" layoutX="143.0" layoutY="132.0" text="Your attendance has been recorded" textAlignment="CENTER" />
    </children>
 </AnchorPane>
