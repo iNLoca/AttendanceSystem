@@ -7,11 +7,13 @@ package gui.controller;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.EventObject;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -69,6 +71,7 @@ public class WelcomeWindowController implements Initializable {
     @FXML
     private void clickStudent(ActionEvent event) throws IOException {
         
+        
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/gui/view/LoginStudent.fxml"));
         Parent root = loader.load();
         LoginStudentController ctrls = loader.getController();
@@ -79,6 +82,8 @@ public class WelcomeWindowController implements Initializable {
         Stage stage = new Stage();
         stage.setScene(scene);
         stage.show();
+        
+       
     }
     
 }
