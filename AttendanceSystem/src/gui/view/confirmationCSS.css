@@ -8,7 +8,6 @@
 }
 
 .button{    
-   /* -fx-background-color: lightgreen;*/
      -fx-background-color: linear-gradient(#f2f2f2, #d6d6d6),
         linear-gradient(#fcfcfc 0%, #d9d9d9 20%, #d6d6d6 100%),
         linear-gradient(#dddddd 0%, #f6f6f6 50%);
@@ -19,14 +18,13 @@
     -fx-font-family: helvetica;
     -fx-border-width: 2;  
     -fx-border-color: #000;
-  /*-fx-border-style: dotted;*/
+
 }
 
 .button:hover{
-  /*-fx-background-color: #4CAF50;*/
   -fx-background-color: #a6000f;
   -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);
-  -fx-text-fill: white;
+  -fx-text-fill: #FFF;
   -fx-font-weight: bold;
 }
 
@@ -40,7 +38,15 @@
     -fx-font-family: "Arial";
     -fx-font-size: 20px;
     -fx-font-weight: bolder;
+    -fx-alignment: center;
 }
 
+#btn_view_overall_attendance{
+    -fx-alignment: center;
+}
+
+#lbl3{
+    -fx-text-fill: #FFF;
+}
 
 
