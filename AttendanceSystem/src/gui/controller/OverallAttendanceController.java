@@ -3,40 +3,39 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package gui.view;
+package gui.controller;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.chart.PieChart;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 
-/**
- * FXML Controller class
- *
- * @author rtlop
- */
-public class ConfirmationController implements Initializable {
+public class OverallAttendanceController implements Initializable {
 
+    private PieChart pieChart;
     @FXML
-    private Label lbl3;
+    private Label lbl_totalpresence;
     @FXML
-    private Label lbl4;
-    @FXML
-    private Label lbl5;
+    private Label lbl_totalabsence;
     @FXML
     private Button btn_close;
-    @FXML
-    private Button btn_view_overall_attendance;
+    
 
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        btn_view_overall_attendance.setId("btn_view_overall_attendance");
-        lbl3.setId("lbl3");
+        ObservableList<PieChart.Data> pieChartData 
+                = FXCollections.observableArrayList(
+                new PieChart.Data("Present", 50),
+                new PieChart.Data("Absent", 50));
+        pieChart.setData(pieChartData);
     }    
     
 }

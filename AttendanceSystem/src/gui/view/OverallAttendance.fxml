@@ -1,14 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.net.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="900.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.view.OverallAttendanceController">
     <stylesheets>
-        <URL value="@overallattendanceCSS.css"/>
+        <URL value="@overallattendanceCSS.css" />
     </stylesheets>
+   <children>
+      <Label fx:id="lbl_totalpresence" layoutX="26.0" layoutY="124.0" text="Total % of presence" textFill="#0f57e8">
+         <font>
+            <Font size="8.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#a6000f" height="100.0" stroke="BLACK" strokeType="INSIDE" width="900.0" />
+      <Label fx:id="lbl_totalabsence" layoutX="26.0" layoutY="149.0" text="Total % of absence" textFill="#ff38d1">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+      <Label layoutX="83.0" layoutY="227.0" text="Overall" />
+      <Label layoutX="352.0" layoutY="216.0" text="Subjects" />
+      <DatePicker layoutX="637.0" layoutY="160.0" />
+      <Circle fill="DODGERBLUE" layoutX="332.0" layoutY="345.0" radius="45.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="DODGERBLUE" layoutX="473.0" layoutY="345.0" radius="45.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="DODGERBLUE" layoutX="332.0" layoutY="488.0" radius="45.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="DODGERBLUE" layoutX="473.0" layoutY="488.0" radius="45.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="DODGERBLUE" layoutX="117.0" layoutY="390.0" radius="72.0" stroke="BLACK" strokeType="INSIDE" />
+      <Label layoutX="300.0" layoutY="260.0" text="DB/OS" />
+      <Label layoutX="451.0" layoutY="260.0" text="ITO2" />
+      <Label layoutX="305.0" layoutY="406.0" text="SCO2" />
+      <Label layoutX="447.0" layoutY="406.0" text="SDE2" />
+      <Circle fill="DODGERBLUE" layoutX="654.0" layoutY="339.0" radius="45.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="DODGERBLUE" layoutX="795.0" layoutY="339.0" radius="45.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="DODGERBLUE" layoutX="654.0" layoutY="482.0" radius="45.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="DODGERBLUE" layoutX="795.0" layoutY="482.0" radius="45.0" stroke="BLACK" strokeType="INSIDE" />
+      <Label layoutX="639.0" layoutY="254.0" text="DB/OS" />
+      <Label layoutX="781.0" layoutY="254.0" text="ITO2" />
+      <Label layoutX="637.0" layoutY="400.0" text="SCO2" />
+      <Label layoutX="779.0" layoutY="400.0" text="SDE2" />
+      <Line endX="-13.0" endY="443.0" layoutX="251.0" layoutY="156.0" startX="-13.0" startY="-56.0" />
+      <Line endX="-13.0" endY="451.0" layoutX="571.0" layoutY="149.0" startX="-13.0" startY="-48.0" />
+      <Button fx:id="btn_close" layoutX="826.0" layoutY="562.0" mnemonicParsing="false" text="Close" AnchorPane.bottomAnchor="7.0" AnchorPane.rightAnchor="7.0" />
+   </children>
 </AnchorPane>

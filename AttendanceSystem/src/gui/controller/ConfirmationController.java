@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package view;
+package gui.controller;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -11,34 +11,32 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.shape.Rectangle;
 
 /**
  * FXML Controller class
  *
  * @author rtlop
  */
-public class WelcomeWindowController implements Initializable {
+public class ConfirmationController implements Initializable {
 
     @FXML
-    private Button btn_teacher;
+    private Label lbl3;
     @FXML
-    private Label lbl1;
+    private Label lbl4;
     @FXML
-    private Label lbl2;
-    @FXML
-    private Button btn_student;
+    private Label lbl5;
     @FXML
     private Button btn_close;
     @FXML
-    private Rectangle rectangle;
+    private Button btn_view_overall_attendance;
 
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        btn_view_overall_attendance.setId("btn_view_overall_attendance");
+        lbl3.setId("lbl3");
     }    
     
 }
