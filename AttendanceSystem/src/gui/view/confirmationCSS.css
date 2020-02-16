@@ -8,7 +8,7 @@
 }
 
 .button{    
-     -fx-background-color: linear-gradient(#f2f2f2, #d6d6d6),
+    -fx-background-color: linear-gradient(#f2f2f2, #d6d6d6),
         linear-gradient(#fcfcfc 0%, #d9d9d9 20%, #d6d6d6 100%),
         linear-gradient(#dddddd 0%, #f6f6f6 50%);
     -fx-cursor: hand;
@@ -33,8 +33,7 @@
     -fx-font-size: 12px;
 }
 
-.label
-{
+.label{
     -fx-font-family: "Arial";
     -fx-font-size: 20px;
     -fx-font-weight: bolder;
