@@ -18,6 +18,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
@@ -40,7 +41,7 @@ public class WelcomeWindowController implements Initializable {
     @FXML
     private Button btn_close;
     @FXML
-    private Rectangle rectangle;
+    private AnchorPane pane_1;
 
     /**
      * Initializes the controller class.
@@ -52,15 +53,14 @@ public class WelcomeWindowController implements Initializable {
         btn_close.setId("btn_close");
         lbl1.setId("lbl1");
         lbl2.setId("lbl2");
-    }    
-
+      
+    }
+    
     @FXML
     private void clickTeacher(ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/gui/view/LoginTeacher.fxml"));
         Parent root = loader.load();
-        LoginTeacherController ctrl = loader.getController();
-        
-       
+        LoginTeacherController ctrl = loader.getController();  
 
         Scene scene = new Scene(root);
         Stage stage = new Stage();
@@ -74,9 +74,7 @@ public class WelcomeWindowController implements Initializable {
         
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/gui/view/LoginStudent.fxml"));
         Parent root = loader.load();
-        LoginStudentController ctrls = loader.getController();
-        
-       
+        LoginStudentController ctrls = loader.getController();     
 
         Scene scene = new Scene(root);
         Stage stage = new Stage();
