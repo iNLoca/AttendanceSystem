@@ -56,7 +56,7 @@ public class ConfirmationController implements Initializable {
     private void openOverrallAttendance(ActionEvent event) throws IOException {
        
         if(btn_view_overall_attendance!=null){
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/gui/view/OverallAttendance.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/attendancesystem/gui/view/OverallAttendance.fxml"));
         Parent root = loader.load();
         OverallAttendanceController oactrl = loader.getController();
         

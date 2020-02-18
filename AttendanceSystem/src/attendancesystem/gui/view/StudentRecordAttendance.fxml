@@ -14,7 +14,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="510.0" prefWidth="649.0" style="-fx-background-color: #a6000f#a6000f;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.controller.StudentRecordAttendanceController">
+<AnchorPane id="AnchorPane" prefHeight="510.0" prefWidth="649.0" style="-fx-background-color: #a6000f#a6000f;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="attendancesystem.gui.controller.StudentRecordAttendanceController">
    <children>
       <Pane layoutX="9.0" layoutY="55.0" prefHeight="445.0" prefWidth="636.0" style="-fx-background-color: #ffffffff;">
          <children>

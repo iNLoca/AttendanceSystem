@@ -51,7 +51,7 @@ public class LoginStudentController implements Initializable {
        String pass = password.getText();
        if(user.equals("Student")&&pass.equals("password"))
         {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/gui/view/StudentRecordAttendance.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/attendancesystem/gui/view/StudentRecordAttendance.fxml"));
         Parent root = loader.load();
         StudentRecordAttendanceController srctrl = loader.getController();
         

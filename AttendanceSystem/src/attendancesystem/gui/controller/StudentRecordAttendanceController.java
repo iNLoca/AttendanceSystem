@@ -76,14 +76,16 @@ public class StudentRecordAttendanceController implements Initializable {
     @FXML
     private void clickAbsent(ActionEvent event) {
         
+        
        absenttext.visibleProperty().bind(absentbtn.selectedProperty()); //The best line ever!!!
+       
     }
 
     @FXML
     private void clickConfirm(ActionEvent event) throws IOException {
         
         
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/gui/view/Confirmation.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/attendancesystem/gui/view/Confirmation.fxml"));
         Parent root = loader.load();
         ConfirmationController cctrl = loader.getController();
         
