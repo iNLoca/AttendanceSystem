@@ -35,7 +35,7 @@ public class OverallAttendanceController implements Initializable {
                 = FXCollections.observableArrayList(
                 new PieChart.Data("Present", 50),
                 new PieChart.Data("Absent", 50));
-        pieChart.setData(pieChartData);
+//        pieChart.setData(pieChartData);
     }    
     
 }
