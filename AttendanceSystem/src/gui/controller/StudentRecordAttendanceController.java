@@ -33,14 +33,16 @@ import javafx.stage.Stage;
  */
 public class StudentRecordAttendanceController implements Initializable {
 
-    @FXML
-    private JFXListView<Label> listview;
+    
     @FXML
     private Label Label;
     @FXML
     private JFXCheckBox presentbtn;
     @FXML
     private JFXCheckBox absentbtn;
+    
+    @FXML
+    private JFXListView<Label> listview;
     @FXML
     private JFXListCell<Label> sde2;
     @FXML
