@@ -28,7 +28,11 @@
                   <Bloom />
                </effect>
             </JFXCheckBox>
+
+            <JFXCheckBox fx:id="absentbtn" checkedColor="#9c1026" layoutX="538.0" layoutY="113.0" onAction="#clickAbsent" prefHeight="18.0" prefWidth="75.0" text="Absent" unCheckedColor="#2e98fb" viewOrder="1.0">
+
             <JFXCheckBox fx:id="absentbtn" checkedColor="#9c1026" layoutX="563.0" layoutY="180.0" onAction="#clickAbsent" prefHeight="18.0" prefWidth="75.0" text="Absent" unCheckedColor="#2e98fb">
+
                <effect>
                   <Bloom />
                </effect>
