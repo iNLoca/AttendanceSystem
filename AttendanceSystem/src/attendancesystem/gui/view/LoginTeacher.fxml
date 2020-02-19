@@ -11,9 +11,11 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
+
 <AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" stylesheets="@loginteacherCSS.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="attendancesystem.gui.controller.LoginTeacherController">
    <children>
       <Pane layoutX="11.0" layoutY="36.0" prefHeight="277.0" prefWidth="557.0" style="-fx-background-color: #F3F2ED;" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+
          <effect>
             <DropShadow />
          </effect>
@@ -23,11 +25,13 @@
                   <Font size="16.0" />
                </font>
             </Label>
+
             <JFXTextField fx:id="user" alignment="TOP_LEFT" focusColor="#09b6bc" labelFloat="true" layoutX="190.0" layoutY="167.0" prefHeight="40.0" prefWidth="200.0" promptText="Username" />
             <JFXButton fx:id="loginT" buttonType="RAISED" layoutX="476.0" layoutY="306.0" onAction="#makeLoginTeacher" prefHeight="40.0" prefWidth="70.0" ripplerFill="#fff379" text="Log In" />
             <ImageView fitHeight="33.0" fitWidth="123.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+
                <image>
-                  <Image url="@../../icons/logo.png" />
+                  <Image url="@../../../icons/logo.png" />
                </image>
             </ImageView>
             <JFXPasswordField fx:id="pass" alignment="TOP_LEFT" focusColor="#09b6bc" labelFloat="true" layoutX="190.0" layoutY="241.0" prefHeight="40.0" prefWidth="200.0" promptText="Password" />
@@ -38,5 +42,12 @@
             </Label>
          </children>
       </Pane>
+
+      <Label layoutX="20.0" layoutY="14.0" prefHeight="14.0" prefWidth="123.0" text="Hello, Teacher!">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+
    </children>
 </AnchorPane>

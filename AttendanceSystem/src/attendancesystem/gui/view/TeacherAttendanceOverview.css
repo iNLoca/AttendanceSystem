@@ -9,7 +9,7 @@ and open the template in the editor.
 */
 
 .root{
-    -fx-background-color: lightgray; 
+    -fx-background-color: #C10D0E; 
 }
 #exit{
      -fx-background-color: linear-gradient(#f2f2f2, #d6d6d6),
@@ -44,23 +44,20 @@ and open the template in the editor.
 #teacherName{
     
     -fx-font-family: 'Arial';
-    -fx-text-fill: #FFF;
-    -fx-font-size: 15px;
+    -fx-text-fill: black;
+    -fx-font-size: 25px;
 }
 #text3{
     -fx-font-family: 'Arial';
-   -fx-text-fill: #FFF;
-    -fx-font-size: 15px;
+   -fx-text-fill: black;
+    -fx-font-size: 25px;
 }
 #className{
-     -fx-text-fill: #FFF;
+     -fx-text-fill: black;
 }
 #lblStatus{
     -fx-background-color: red;
     -fx-border-width: 5;
     -fx-border-style: segments;
      -fx-border-color: gray;
-}
-#rectangle{
-    -fx-background-color: red;
 }
