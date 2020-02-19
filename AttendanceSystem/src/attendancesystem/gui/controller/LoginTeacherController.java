@@ -42,7 +42,7 @@ public class LoginTeacherController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        wrongpass.setId("wrongpass");
     }    
 
     @FXML

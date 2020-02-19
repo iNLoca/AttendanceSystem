@@ -18,7 +18,7 @@
             <DropShadow />
          </effect>
          <children>
-            <Label layoutX="224.0" layoutY="107.0" text="Welcome">
+            <Label layoutX="236.0" layoutY="88.0" text="Welcome">
                <font>
                   <Font size="16.0" />
                </font>
@@ -28,23 +28,25 @@
                   <Font size="14.0" />
                </font></JFXTextField>
             <JFXButton fx:id="loginT" buttonType="RAISED" layoutX="472.0" layoutY="315.0" onAction="#makeLoginTeacher" prefHeight="31.0" prefWidth="71.0" ripplerFill="#009fe3" stylesheets="@loginteacherCSS.css" text="Log In" />
-            <ImageView fitHeight="33.0" fitWidth="123.0" layoutX="420.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../icons/logo.png" />
-               </image>
-            </ImageView>
 
             <JFXPasswordField fx:id="pass" alignment="TOP_LEFT" focusColor="#09b6bc" labelFloat="true" layoutX="196.0" layoutY="250.0" promptText="Password">
                <font>
                   <Font size="14.0" />
                </font></JFXPasswordField>
-            <Label fx:id="wrongpass" layoutX="136.0" layoutY="130.0" textFill="#ae0b0b" />
-            <Label layoutX="196.0" layoutY="65.0" text="Hello, Teacher!">
+            <Label layoutX="208.0" layoutY="49.0" text="Hello, Teacher!">
                <font>
                   <Font size="17.0" />
                </font>
             </Label>
-            <Label fx:id="wrongpass" layoutX="184.0" layoutY="75.0" prefHeight="22.0" prefWidth="189.0" textFill="#ae0b0b" />
+            <Label fx:id="wrongpass" layoutX="112.0" layoutY="142.0" prefHeight="25.0" prefWidth="325.0" textFill="RED">
+               <font>
+                  <Font size="9.0" />
+               </font></Label>
+            <ImageView fitHeight="100.0" fitWidth="150.0" layoutX="393.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../icons/logo.png" />
+               </image>
+            </ImageView>
 
          </children>
       </Pane>

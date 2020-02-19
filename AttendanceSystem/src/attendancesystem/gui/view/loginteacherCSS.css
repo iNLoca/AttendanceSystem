@@ -29,3 +29,10 @@
     -fx-font-weight: bolder;
     -fx-alignment: center;
 }
+
+#wrongpass{
+    -fx-font-family: "Arial";
+    -fx-font-size: 10px;
+    -fx-alignment: center;
+    -fx-text-fill:red;
+}

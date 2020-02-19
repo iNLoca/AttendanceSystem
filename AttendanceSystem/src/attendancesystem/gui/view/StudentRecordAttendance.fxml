@@ -14,69 +14,67 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #C10D0E#C10D0E;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="attendancesystem.gui.controller.StudentRecordAttendanceController">
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="900.0" stylesheets="@studentrecordattendanceCSS.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="attendancesystem.gui.controller.StudentRecordAttendanceController">
    <children>
-      <Pane layoutX="20.0" layoutY="58.0" prefHeight="531.0" prefWidth="884.0" style="-fx-background-color: #F3F2ED #F3F2ED;" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
+      <Pane layoutX="20.0" layoutY="58.0" prefHeight="531.0" prefWidth="884.0" style="-fx-background-color: #F3F2ED #F3F2ED;" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
          <children>
-            <Label layoutX="14.0" layoutY="26.0" prefHeight="46.0" prefWidth="529.0" text="Please select your status for the subjects on">
+            <Label layoutX="57.0" layoutY="106.0" prefHeight="46.0" prefWidth="447.0" text="Please select your status for the subjects on">
                <font>
                   <Font name="Didot" size="25.0" />
                </font>
             </Label>
-            <JFXCheckBox fx:id="presentbtn" layoutX="180.0" layoutY="113.0" onAction="#clickPresent" prefHeight="18.0" prefWidth="81.0" text="Present" unCheckedColor="#2e98fb">
+            <JFXCheckBox fx:id="presentbtn" layoutX="224.0" layoutY="180.0" onAction="#clickPresent" prefHeight="18.0" prefWidth="81.0" text="Present" unCheckedColor="#2e98fb">
                <effect>
                   <Bloom />
                </effect>
             </JFXCheckBox>
-            <JFXCheckBox fx:id="absentbtn" checkedColor="#9c1026" layoutX="538.0" layoutY="113.0" onAction="#clickAbsent" prefHeight="18.0" prefWidth="75.0" text="Absent" unCheckedColor="#2e98fb">
+            <JFXCheckBox fx:id="absentbtn" checkedColor="#9c1026" layoutX="563.0" layoutY="180.0" onAction="#clickAbsent" prefHeight="18.0" prefWidth="75.0" text="Absent" unCheckedColor="#2e98fb">
                <effect>
                   <Bloom />
                </effect>
             </JFXCheckBox>
-            <JFXListView fx:id="listview" layoutX="24.0" layoutY="194.0" prefHeight="213.0" prefWidth="148.0" style="-fx-border-color: #2e98fb#2e98fb; -fx-effect: Bloom;" stylesheets="@StudentRecord.css" />
-            <Label fx:id="Label" layoutX="27.0" layoutY="151.0" prefHeight="29.0" prefWidth="75.0" text="Courses">
+            <JFXListView fx:id="listview" layoutX="36.0" layoutY="261.0" prefHeight="213.0" prefWidth="148.0" style="-fx-border-color: #2e98fb#2e98fb; -fx-effect: Bloom;" stylesheets="@StudentRecord.css" />
+            <Label fx:id="Label" layoutX="39.0" layoutY="232.0" prefHeight="29.0" prefWidth="110.0" text="Courses:">
                <font>
                   <Font name="Didot" size="19.0" />
                </font>
             </Label>
-            <JFXListCell fx:id="sde2" alignment="CENTER" editable="false" layoutX="27.0" layoutY="204.0" prefHeight="35.0" prefWidth="142.0" style="-fx-border-color: #2e98fb#2e98fb;" text="SDE 2">
+            <JFXListCell fx:id="sde2" alignment="CENTER" layoutX="39.0" layoutY="271.0" prefHeight="35.0" prefWidth="142.0" style="-fx-border-color: #2e98fb#2e98fb;" text="SDE 2">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>
             </JFXListCell>
-            <JFXListCell fx:id="sco2" alignment="CENTER" editable="false" layoutX="27.0" layoutY="253.0" prefHeight="35.0" prefWidth="142.0" style="-fx-border-color: #2e98fb#2e98fb;" text="SCO 2">
+            <JFXListCell fx:id="sco2" alignment="CENTER" layoutX="39.0" layoutY="320.0" prefHeight="35.0" prefWidth="142.0" style="-fx-border-color: #2e98fb#2e98fb;" text="SCO 2">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>
             </JFXListCell>
-            <JFXListCell fx:id="dbo" alignment="CENTER" editable="false" layoutX="27.0" layoutY="301.0" prefHeight="35.0" prefWidth="142.0" style="-fx-border-color: #2e98fb#2e98fb;" text="DBO">
+            <JFXListCell fx:id="dbo" alignment="CENTER" editable="false" layoutX="39.0" layoutY="368.0" prefHeight="35.0" prefWidth="142.0" style="-fx-border-color: #2e98fb#2e98fb;" text="DB/OS">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>
             </JFXListCell>
-            <JFXListCell fx:id="ito" alignment="CENTER" editable="false" layoutX="27.0" layoutY="354.0" prefHeight="35.0" prefWidth="142.0" style="-fx-border-color: #2e98fb#2e98fb;" text="ITO">
+            <JFXListCell fx:id="ito" alignment="CENTER" editable="false" layoutX="39.0" layoutY="421.0" prefHeight="35.0" prefWidth="142.0" style="-fx-border-color: #2e98fb#2e98fb;" text="ITO 2">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>
             </JFXListCell>
-            <JFXDatePicker defaultColor="#016bb2" layoutX="531.0" layoutY="35.0" prefHeight="22.0" prefWidth="246.0" promptText="Current date" />
+            <JFXDatePicker defaultColor="#016bb2" layoutX="523.0" layoutY="115.0" prefHeight="22.0" prefWidth="246.0" />
             <JFXButton fx:id="confirmbtn" buttonType="RAISED" layoutX="746.0" layoutY="474.0" onAction="#clickConfirm" ripplerFill="#679fffdb" style="-fx-border-color: #000000;" text="Confirm" textFill="#a6000f">
                <font>
                   <Font name="Courier Bold" size="16.0" />
                </font>
             </JFXButton>
-            <JFXTextArea fx:id="absenttext" layoutX="371.0" layoutY="194.0" prefHeight="172.0" prefWidth="421.0" promptText="Please specify the reason for your absense..." style="-fx-border-color: #000000; -fx-background-color: #ffffffff;" />
+            <JFXTextArea fx:id="absenttext" layoutX="383.0" layoutY="261.0" prefHeight="172.0" prefWidth="421.0" promptText="Please, specify the reason for your absense" style="-fx-border-color: #000000; -fx-background-color: #ffffffff;">
+               <font>
+                  <Font size="14.0" />
+               </font></JFXTextArea>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="646.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../icons/logo.png" />
+               </image>
+            </ImageView>
          </children>
       </Pane>
-      <ImageView fitHeight="46.0" fitWidth="148.0" layoutX="732.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../../icons/logo.png" />
-         </image>
-      </ImageView>
-      <Label layoutX="20.0" layoutY="40.0" text="Student Attendance">
-         <font>
-            <Font name="Didot" size="16.0" />
-         </font>
-      </Label>
    </children>
 </AnchorPane>

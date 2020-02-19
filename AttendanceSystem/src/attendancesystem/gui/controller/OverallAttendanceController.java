@@ -6,16 +6,19 @@
 package attendancesystem.gui.controller;
 
 import java.net.URL;
+import java.util.EventObject;
 import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.chart.PieChart;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 
 public class OverallAttendanceController implements Initializable {
 
@@ -42,11 +45,9 @@ public class OverallAttendanceController implements Initializable {
     @FXML
     private PieChart scoChart2;
     @FXML
-    private PieChart sdeChart1;    
+    private PieChart sdeChart1;
     @FXML
     private PieChart sdeChart2;
-    
-   
 
     /**
      * Initializes the controller class.
@@ -58,7 +59,7 @@ public class OverallAttendanceController implements Initializable {
                         new PieChart.Data("Present", 82),
                         new PieChart.Data("Absent", 18));
         overAllChart.setData(overallChartData);
-        
+
         ObservableList<PieChart.Data> dbos1ChartData
                 = FXCollections.observableArrayList(
                         new PieChart.Data("Present", 30),
@@ -99,9 +100,11 @@ public class OverallAttendanceController implements Initializable {
                         new PieChart.Data("Present", 55),
                         new PieChart.Data("Absent", 45));
         sdeChart2.setData(sde2ChartData);
-       }
+    }
 
     @FXML
     private void clickClose(ActionEvent event) {
+        Stage stage = (Stage) ((Node) ((EventObject) event).getSource()).getScene().getWindow();
+        stage.close();
     }
 }
