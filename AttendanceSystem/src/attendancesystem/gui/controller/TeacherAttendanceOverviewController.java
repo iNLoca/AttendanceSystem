@@ -69,6 +69,7 @@ public class TeacherAttendanceOverviewController implements Initializable {
         className.setId("className");
         students.getStyleClass().add("students");
         teacherName.setId("teacherName");
+        
     }    
     
 }
