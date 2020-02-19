@@ -23,12 +23,12 @@
                   <Font name="Didot" size="25.0" />
                </font>
             </Label>
-            <JFXCheckBox fx:id="presentbtn" layoutX="180.0" layoutY="113.0" onAction="#clickPresent" onMouseClicked="#clickedPresent" prefHeight="18.0" prefWidth="81.0" text="Present" unCheckedColor="#2e98fb">
+            <JFXCheckBox fx:id="presentbtn" layoutX="180.0" layoutY="113.0" onAction="#clickPresent" prefHeight="18.0" prefWidth="81.0" text="Present" unCheckedColor="#2e98fb">
                <effect>
                   <Bloom />
                </effect>
             </JFXCheckBox>
-            <JFXCheckBox fx:id="absentbtn" checkedColor="#9c1026" layoutX="538.0" layoutY="113.0" onAction="#clickAbsent" onMouseClicked="#clickedmabsent" prefHeight="18.0" prefWidth="75.0" text="Absent" unCheckedColor="#2e98fb">
+            <JFXCheckBox fx:id="absentbtn" checkedColor="#9c1026" layoutX="538.0" layoutY="113.0" onAction="#clickAbsent" prefHeight="18.0" prefWidth="75.0" text="Absent" unCheckedColor="#2e98fb">
                <effect>
                   <Bloom />
                </effect>

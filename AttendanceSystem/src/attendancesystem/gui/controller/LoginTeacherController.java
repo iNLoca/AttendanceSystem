@@ -8,11 +8,13 @@ package attendancesystem.gui.controller;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
+import static java.lang.System.err;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Label;
 
 /**
  * FXML Controller class
@@ -27,6 +29,8 @@ public class LoginTeacherController implements Initializable {
     private JFXButton loginT;
     @FXML
     private JFXPasswordField pass;
+    @FXML
+    private Label wrongpass;
 
     /**
      * Initializes the controller class.
@@ -45,8 +49,13 @@ public class LoginTeacherController implements Initializable {
         {
           System.out.println("Welcome Teacher");
         }else
-            System.out.println("Wrong Password");
-        
+            wrongpass.setVisible(false);
+            
+         //wrongpass.visibleProperty().bind(
+             loginT.pressedProperty();
+             
+           
+                           
         
     }
     

@@ -96,13 +96,4 @@ public class StudentRecordAttendanceController implements Initializable {
    
    }
 
-    @FXML
-    private void clickedmabsent(MouseEvent event) {
-      
-    }
-
-    @FXML
-    private void clickedPresent(MouseEvent event) {
-        
-    }
 }
