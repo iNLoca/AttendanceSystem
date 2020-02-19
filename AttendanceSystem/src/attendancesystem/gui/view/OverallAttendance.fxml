@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
 <?import com.jfoenix.controls.JFXDatePicker?>
 <?import java.net.URL?>
 <?import javafx.scene.chart.PieChart?>
@@ -31,34 +32,35 @@
               <items>
                   <AnchorPane fx:id="anchorpaneLeft" prefHeight="422.0" prefWidth="283.0" style="-fx-background-color: #F3F2ED;">
                      <children>
-                        <Label layoutX="72.0" layoutY="58.0" text="Overall" AnchorPane.leftAnchor="72.0" AnchorPane.topAnchor="25.0" />
+                        <Label layoutX="72.0" layoutY="14.0" text="Overall" AnchorPane.leftAnchor="72.0" AnchorPane.topAnchor="14.0" />
                         <PieChart fx:id="overAllChart" layoutX="11.0" layoutY="167.0" prefHeight="189.0" prefWidth="150.0" />
                      </children>
                   </AnchorPane>
                   <AnchorPane prefWidth="415.0" style="-fx-background-color: #F3F2ED;">
                      <children>
-                        <Label layoutX="162.0" layoutY="31.0" text="Subjects" AnchorPane.topAnchor="25.0" />
-                        <Label layoutX="281.0" layoutY="351.0" text="SDE2" AnchorPane.bottomAnchor="148.0" AnchorPane.rightAnchor="73.0" />
-                        <Label layoutX="81.0" layoutY="351.0" text="SCO2" AnchorPane.bottomAnchor="148.0" AnchorPane.leftAnchor="81.0" />
-                        <Label layoutX="285.0" layoutY="149.0" text="ITO2" AnchorPane.rightAnchor="77.0" AnchorPane.topAnchor="149.0" />
-                        <Label layoutX="76.0" layoutY="149.0" text="DB/OS" AnchorPane.leftAnchor="76.0" AnchorPane.topAnchor="149.0" />
-                        <PieChart fx:id="dbosChart1" layoutX="8.0" layoutY="172.0" prefHeight="43.0" prefWidth="45.0" />
-                        <PieChart fx:id="scoChart1" layoutX="1.0" layoutY="372.0" prefHeight="150.0" prefWidth="27.0" />
-                        <PieChart fx:id="sdeChart1" layoutX="207.0" layoutY="372.0" prefHeight="150.0" prefWidth="27.0" />
-                        <PieChart fx:id="itoChart1" layoutX="207.0" layoutY="172.0" prefHeight="150.0" prefWidth="27.0" />
+                        <Label layoutX="162.0" layoutY="13.0" text="Subjects" AnchorPane.topAnchor="13.0" />
+                        <Label layoutX="281.0" layoutY="339.0" text="SDE2" AnchorPane.bottomAnchor="160.0" AnchorPane.rightAnchor="73.0" />
+                        <Label layoutX="81.0" layoutY="339.0" text="SCO2" AnchorPane.bottomAnchor="160.0" AnchorPane.leftAnchor="81.0" />
+                        <Label layoutX="285.0" layoutY="137.0" text="ITO2" AnchorPane.rightAnchor="77.0" AnchorPane.topAnchor="137.0" />
+                        <Label layoutX="76.0" layoutY="137.0" text="DB/OS" AnchorPane.leftAnchor="76.0" AnchorPane.topAnchor="137.0" />
+                        <PieChart fx:id="dbosChart1" layoutX="8.0" layoutY="160.0" prefHeight="43.0" prefWidth="45.0" />
+                        <PieChart fx:id="scoChart1" layoutX="1.0" layoutY="360.0" prefHeight="150.0" prefWidth="27.0" />
+                        <PieChart fx:id="sdeChart1" layoutX="207.0" layoutY="360.0" prefHeight="150.0" prefWidth="27.0" />
+                        <PieChart fx:id="itoChart1" layoutX="207.0" layoutY="160.0" prefHeight="150.0" prefWidth="27.0" />
                      </children>
                   </AnchorPane>
                   <AnchorPane prefWidth="415.0" style="-fx-background-color: #F3F2ED;">
                      <children>
-                        <JFXDatePicker defaultColor="#a6000f" layoutX="57.0" layoutY="31.0" AnchorPane.leftAnchor="60.0" AnchorPane.rightAnchor="52.0" AnchorPane.topAnchor="31.0" />
-                        <Label layoutX="316.0" layoutY="352.0" text="SDE2" AnchorPane.bottomAnchor="147.0" AnchorPane.rightAnchor="48.0" />
-                        <Label layoutX="48.0" layoutY="352.0" text="SCO2" AnchorPane.bottomAnchor="147.0" AnchorPane.leftAnchor="48.0" />
-                        <Label layoutX="320.0" layoutY="151.0" text="ITO2" AnchorPane.rightAnchor="52.0" AnchorPane.topAnchor="151.0" />
-                        <Label layoutX="43.0" layoutY="151.0" text="DB/OS" AnchorPane.leftAnchor="43.0" AnchorPane.topAnchor="151.0" />
-                        <PieChart fx:id="scoChart2" layoutX="7.0" layoutY="369.0" prefHeight="150.0" prefWidth="27.0" />
-                        <PieChart fx:id="sdeChart2" layoutX="217.0" layoutY="369.0" prefHeight="150.0" prefWidth="27.0" />
-                        <PieChart fx:id="dbosChart2" layoutX="3.0" layoutY="168.0" prefHeight="150.0" prefWidth="27.0" />
-                        <PieChart fx:id="itoChart2" layoutX="203.0" layoutY="168.0" prefHeight="150.0" prefWidth="27.0" />
+                        <JFXDatePicker defaultColor="#a6000f" layoutX="60.0" layoutY="14.0" AnchorPane.leftAnchor="60.0" AnchorPane.rightAnchor="52.0" AnchorPane.topAnchor="14.0" />
+                        <Label layoutX="316.0" layoutY="335.0" text="SDE2" AnchorPane.bottomAnchor="164.0" AnchorPane.rightAnchor="48.0" />
+                        <Label layoutX="48.0" layoutY="335.0" text="SCO2" AnchorPane.bottomAnchor="164.0" AnchorPane.leftAnchor="48.0" />
+                        <Label layoutX="320.0" layoutY="134.0" text="ITO2" AnchorPane.rightAnchor="52.0" AnchorPane.topAnchor="134.0" />
+                        <Label layoutX="43.0" layoutY="134.0" text="DB/OS" AnchorPane.leftAnchor="43.0" AnchorPane.topAnchor="134.0" />
+                        <PieChart fx:id="scoChart2" layoutX="7.0" layoutY="352.0" prefHeight="150.0" prefWidth="27.0" />
+                        <PieChart fx:id="sdeChart2" layoutX="217.0" layoutY="352.0" prefHeight="150.0" prefWidth="27.0" />
+                        <PieChart fx:id="dbosChart2" layoutX="3.0" layoutY="151.0" prefHeight="150.0" prefWidth="27.0" />
+                        <PieChart fx:id="itoChart2" layoutX="203.0" layoutY="151.0" prefHeight="150.0" prefWidth="27.0" />
+                        <JFXButton fx:id="btn_close" buttonType="RAISED" layoutX="353.0" layoutY="461.0" onAction="#clickClose" ripplerFill="#fff379" text="Close" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="5.0" />
                      </children>
                   </AnchorPane>
               </items>

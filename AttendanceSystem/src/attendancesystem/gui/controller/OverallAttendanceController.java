@@ -9,6 +9,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.chart.PieChart;
@@ -99,4 +100,8 @@ public class OverallAttendanceController implements Initializable {
                         new PieChart.Data("Absent", 45));
         sdeChart2.setData(sde2ChartData);
        }
+
+    @FXML
+    private void clickClose(ActionEvent event) {
+    }
 }

@@ -83,5 +83,9 @@ public class WelcomeWindowController implements Initializable {
         
        
     }
+
+    @FXML
+    private void clickClose(ActionEvent event) {
+    }
     
 }
