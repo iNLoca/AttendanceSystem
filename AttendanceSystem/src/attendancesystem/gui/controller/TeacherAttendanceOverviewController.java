@@ -60,8 +60,8 @@ public class TeacherAttendanceOverviewController implements Initializable {
         reasonForAbsence.setId("reasonForAbsence");
         lblStatus.getStyleClass().add("lblStatus");
         lblStatus.setId("lblStatus");
-        rectangle.getStyleClass().add("rectangle");
-        rectangle.setId("rectangle");
+
+       
        
         percentageOfAbsence.getStyleClass().add("percentageOfAbsence");
         teacherName.getStyleClass().add("teacherName");
