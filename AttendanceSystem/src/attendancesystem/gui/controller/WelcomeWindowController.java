@@ -53,14 +53,14 @@ public class WelcomeWindowController implements Initializable {
         btn_close.setId("btn_close");
         lbl1.setId("lbl1");
         lbl2.setId("lbl2");
-      
+
     }
-    
+
     @FXML
     private void clickTeacher(ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/attendancesystem/gui/view/LoginTeacher.fxml"));
         Parent root = loader.load();
-        LoginTeacherController ctrl = loader.getController();  
+        LoginTeacherController ctrl = loader.getController();
 
         Scene scene = new Scene(root);
         Stage stage = new Stage();
@@ -70,22 +70,21 @@ public class WelcomeWindowController implements Initializable {
 
     @FXML
     private void clickStudent(ActionEvent event) throws IOException {
-        
-        
+
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/attendancesystem/gui/view/LoginStudent.fxml"));
         Parent root = loader.load();
-        LoginStudentController ctrls = loader.getController();     
+        LoginStudentController ctrls = loader.getController();
 
         Scene scene = new Scene(root);
         Stage stage = new Stage();
         stage.setScene(scene);
         stage.show();
-        
-       
+
     }
 
     @FXML
-    private void clickClose(ActionEvent event) {
+    private void clickClose(ActionEvent event) {    
+    Stage stage = (Stage) ((Node) ((EventObject) event).getSource()).getScene().getWindow();
+    stage.close ();
     }
-    
 }

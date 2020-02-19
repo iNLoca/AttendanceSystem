@@ -19,6 +19,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
@@ -35,13 +36,15 @@ public class LoginStudentController implements Initializable {
     private JFXButton login;
     @FXML
     private JFXPasswordField password;
+    @FXML
+    private Label lbl_wrong;
 
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        lbl_wrong.setId("lbl_wrong");
     }    
 
     @FXML
@@ -60,13 +63,15 @@ public class LoginStudentController implements Initializable {
         stage.setScene(scene);
         stage.show();
         } else 
-        System.out.println("Wrong Password");
+        lbl_wrong.setText("Wrong password or username");
+            login.pressedProperty();
     }
 
     @FXML
     private void clickLogin(MouseEvent event) {
-        Stage stage = (Stage) ((Node) ((EventObject) event).getSource()).getScene().getWindow();
-        stage.close();
+     
     }
+    
+
     
 }
