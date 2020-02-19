@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package gui.controller;
+package attendancesystem.gui.controller;
 
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXCheckBox;
@@ -33,14 +33,16 @@ import javafx.stage.Stage;
  */
 public class StudentRecordAttendanceController implements Initializable {
 
-    @FXML
-    private JFXListView<Label> listview;
+    
     @FXML
     private Label Label;
     @FXML
     private JFXCheckBox presentbtn;
     @FXML
     private JFXCheckBox absentbtn;
+    
+    @FXML
+    private JFXListView<Label> listview;
     @FXML
     private JFXListCell<Label> sde2;
     @FXML
@@ -74,14 +76,16 @@ public class StudentRecordAttendanceController implements Initializable {
     @FXML
     private void clickAbsent(ActionEvent event) {
         
+        
        absenttext.visibleProperty().bind(absentbtn.selectedProperty()); //The best line ever!!!
+       
     }
 
     @FXML
     private void clickConfirm(ActionEvent event) throws IOException {
         
-        if(presentbtn!=null){
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/gui/view/Confirmation.fxml"));
+        
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/attendancesystem/gui/view/Confirmation.fxml"));
         Parent root = loader.load();
         ConfirmationController cctrl = loader.getController();
         
@@ -89,7 +93,7 @@ public class StudentRecordAttendanceController implements Initializable {
         Stage stage = new Stage();
         stage.setScene(scene);
         stage.show();
-      }
+   
    }
 
     @FXML

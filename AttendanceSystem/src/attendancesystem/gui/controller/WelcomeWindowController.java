@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package gui.controller;
+package attendancesystem.gui.controller;
 
 import java.io.IOException;
 import java.net.URL;
@@ -58,7 +58,7 @@ public class WelcomeWindowController implements Initializable {
     
     @FXML
     private void clickTeacher(ActionEvent event) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/gui/view/LoginTeacher.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/attendancesystem/gui/view/LoginTeacher.fxml"));
         Parent root = loader.load();
         LoginTeacherController ctrl = loader.getController();  
 
@@ -72,7 +72,7 @@ public class WelcomeWindowController implements Initializable {
     private void clickStudent(ActionEvent event) throws IOException {
         
         
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/gui/view/LoginStudent.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/attendancesystem/gui/view/LoginStudent.fxml"));
         Parent root = loader.load();
         LoginStudentController ctrls = loader.getController();     
 

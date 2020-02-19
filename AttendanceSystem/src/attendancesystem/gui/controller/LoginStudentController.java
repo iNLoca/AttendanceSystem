@@ -3,7 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package gui.controller;
+package attendancesystem.gui.controller;
+
+import com.jfoenix.controls.JFXButton;
+import com.jfoenix.controls.JFXPasswordField;
+import com.jfoenix.controls.JFXTextField;
 import java.io.IOException;
 import java.net.URL;
 import java.util.EventObject;
@@ -15,46 +19,39 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
 /**
  * FXML Controller class
  *
- * @author rtlop
+ * @author mac
  */
-public class ConfirmationController implements Initializable {
+public class LoginStudentController implements Initializable {
 
     @FXML
-    private Label lbl3;
+    private JFXTextField username;
     @FXML
-    private Label lbl4;
+    private JFXButton login;
     @FXML
-    private Label lbl5;
-    @FXML
-    private Button btn_close;
-    @FXML
-    private Button btn_view_overall_attendance;
+    private JFXPasswordField password;
 
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        btn_view_overall_attendance.setId("btn_view_overall_attendance");
-        lbl3.setId("lbl3");
+        // TODO
     }    
 
     @FXML
-    private void close(ActionEvent event) {
-        Stage stage = (Stage) ((Node) ((EventObject) event).getSource()).getScene().getWindow();
-        stage.close();
-    }
-
-    @FXML
-    private void openOverrallAttendance(ActionEvent event) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/gui/view/TeacherAttendanceOverview.fxml"));
+    private void makeLogin(ActionEvent event) throws IOException {
+        
+       String user = username.getText();
+       String pass = password.getText();
+       if(user.equals("Student")&&pass.equals("password"))
+        {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/attendancesystem/gui/view/StudentRecordAttendance.fxml"));
         Parent root = loader.load();
         StudentRecordAttendanceController srctrl = loader.getController();
         
@@ -62,6 +59,14 @@ public class ConfirmationController implements Initializable {
         Stage stage = new Stage();
         stage.setScene(scene);
         stage.show();
+        } else 
+        System.out.println("Wrong Password");
+    }
+
+    @FXML
+    private void clickLogin(MouseEvent event) {
+        Stage stage = (Stage) ((Node) ((EventObject) event).getSource()).getScene().getWindow();
+        stage.close();
     }
     
 }
