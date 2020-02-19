@@ -1,23 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
+<?import com.jfoenix.controls.JFXButton?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" fx:id="pane_1" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: a6000f;" stylesheets="@WelcomeWindowCSS.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="attendancesystem.gui.controller.WelcomeWindowController">
+<AnchorPane id="AnchorPane" fx:id="pane_1" prefHeight="600.0" prefWidth="900.0" stylesheets="@WelcomeWindowCSS.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="attendancesystem.gui.controller.WelcomeWindowController">
    <children>
-      <AnchorPane layoutX="26.0" layoutY="20.0" prefHeight="346.0" prefWidth="549.0" style="-fx-background-color: lightgray;" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+      <AnchorPane layoutX="26.0" layoutY="20.0" prefHeight="346.0" prefWidth="549.0" style="-fx-background-color: #F3F2ED;" stylesheets="@WelcomeWindowCSS.css" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
          <children>
-            <Label fx:id="lbl1" layoutX="252.0" layoutY="102.0" text="Hello!" />
-            <Button fx:id="btn_teacher" mnemonicParsing="false" onAction="#clickTeacher" text="Teacher" AnchorPane.bottomAnchor="50.0" AnchorPane.rightAnchor="100.0" />
-            <Label fx:id="lbl2" layoutX="130.0" layoutY="180.0" text="Are you a student or a teacher?" AnchorPane.topAnchor="180.0" />
-            <Button fx:id="btn_student" mnemonicParsing="false" onAction="#clickStudent" text="Student" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="100.0" />
-            <Button fx:id="btn_close" mnemonicParsing="false" text="Close" AnchorPane.bottomAnchor="7.0" AnchorPane.rightAnchor="7.0" />
-            <ImageView fitHeight="150.0" fitWidth="150.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="7.0" AnchorPane.topAnchor="7.0">
+            <Label fx:id="lbl1" layoutX="388.0" layoutY="157.0" text="Hello!" textFill="#723636" />
+            <Label fx:id="lbl2" layoutX="219.0" layoutY="269.0" text="Are you a student or a teacher?" AnchorPane.topAnchor="269.0" />
+            <JFXButton fx:id="btn_student" buttonType="RAISED" layoutX="242.0" layoutY="386.0" onAction="#clickStudent" ripplerFill="#009fe3" text="Student" />
+            <JFXButton fx:id="btn_teacher" buttonType="RAISED" layoutX="543.0" layoutY="386.0" onAction="#clickTeacher" ripplerFill="#009fe3" text="Teacher" />
+            <JFXButton fx:id="btn_close" buttonType="RAISED" layoutX="788.0" layoutY="505.0" onAction="#clickClose" prefHeight="36.0" prefWidth="63.0" ripplerFill="#fff379" text="Close" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="5.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXButton>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="7.0" AnchorPane.topAnchor="7.0">
                <image>
-                  <Image url="@../../icons/logo.png" />
+                  <Image url="@../../../icons/logo.png" />
                </image>
             </ImageView>
          </children>

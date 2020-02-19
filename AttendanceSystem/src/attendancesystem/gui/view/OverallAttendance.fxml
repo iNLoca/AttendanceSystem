@@ -6,8 +6,6 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.SplitPane?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
@@ -16,7 +14,7 @@
         <URL value="@overallattendanceCSS.css" />
     </stylesheets>
    <children>
-      <AnchorPane layoutX="30.0" layoutY="23.0" prefHeight="566.0" prefWidth="856.0" style="-fx-background-color: lightgray;" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+      <AnchorPane layoutX="30.0" layoutY="23.0" prefHeight="566.0" prefWidth="856.0" style="-fx-background-color: #F3F2ED;" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
          <children>
             <Button fx:id="btn_close" mnemonicParsing="false" text="Close" AnchorPane.bottomAnchor="7.0" AnchorPane.rightAnchor="7.0" />
             <Label fx:id="lbl_totalpresence" layoutX="365.0" layoutY="114.0" text="Total % of presence" textFill="#0f57e8" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="15.0">
@@ -29,20 +27,15 @@
                   <Font size="10.0" />
                </font>
             </Label>
-            <ImageView fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="7.0" AnchorPane.topAnchor="7.0">
-               <image>
-                  <Image url="@../../icons/logo.png" />
-               </image>
-            </ImageView>
             <SplitPane dividerPositions="0.3333333333333333, 0.6666666666666666" layoutY="74.0" prefHeight="486.0" prefWidth="860.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="74.0">
               <items>
-                  <AnchorPane fx:id="anchorpaneLeft" prefHeight="422.0" prefWidth="283.0" style="-fx-background-color: lightgrey;">
+                  <AnchorPane fx:id="anchorpaneLeft" prefHeight="422.0" prefWidth="283.0" style="-fx-background-color: #F3F2ED;">
                      <children>
                         <Label layoutX="72.0" layoutY="58.0" text="Overall" AnchorPane.leftAnchor="72.0" AnchorPane.topAnchor="25.0" />
                         <PieChart fx:id="overAllChart" layoutX="11.0" layoutY="167.0" prefHeight="189.0" prefWidth="150.0" />
                      </children>
                   </AnchorPane>
-                  <AnchorPane prefWidth="415.0" style="-fx-background-color: lightgrey;">
+                  <AnchorPane prefWidth="415.0" style="-fx-background-color: #F3F2ED;">
                      <children>
                         <Label layoutX="162.0" layoutY="31.0" text="Subjects" AnchorPane.topAnchor="25.0" />
                         <Label layoutX="281.0" layoutY="351.0" text="SDE2" AnchorPane.bottomAnchor="148.0" AnchorPane.rightAnchor="73.0" />
@@ -55,7 +48,7 @@
                         <PieChart fx:id="itoChart1" layoutX="207.0" layoutY="172.0" prefHeight="150.0" prefWidth="27.0" />
                      </children>
                   </AnchorPane>
-                  <AnchorPane prefWidth="415.0" style="-fx-background-color: lightgrey;">
+                  <AnchorPane prefWidth="415.0" style="-fx-background-color: #F3F2ED;">
                      <children>
                         <JFXDatePicker defaultColor="#a6000f" layoutX="57.0" layoutY="31.0" AnchorPane.leftAnchor="60.0" AnchorPane.rightAnchor="52.0" AnchorPane.topAnchor="31.0" />
                         <Label layoutX="316.0" layoutY="352.0" text="SDE2" AnchorPane.bottomAnchor="147.0" AnchorPane.rightAnchor="48.0" />

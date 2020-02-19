@@ -1,6 +1,6 @@
 
 .root{
-    -fx-background-color: lightgray;
+    -fx-background-color: #C10D0E;
 }
 
 .button{    
@@ -18,6 +18,13 @@
 }
 
 .button:hover{
+  -fx-background-color: #a6000f;
+  -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);
+  -fx-text-fill: #FFF;
+  -fx-font-weight: bold;
+}
+
+#btn_close:hover{
   -fx-background-color: #a6000f;
   -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);
   -fx-text-fill: #FFF;
