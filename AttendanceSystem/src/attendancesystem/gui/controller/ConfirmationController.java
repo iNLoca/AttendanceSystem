@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package attendancesystem.gui.controller;
+
 import java.io.IOException;
 import java.net.URL;
 import java.util.EventObject;
@@ -19,11 +20,6 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
-/**
- * FXML Controller class
- *
- * @author rtlop
- */
 public class ConfirmationController implements Initializable {
 
     @FXML
@@ -44,30 +40,27 @@ public class ConfirmationController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         btn_view_overall_attendance.setId("btn_view_overall_attendance");
         lbl3.setId("lbl3");
-    }    
+    }
 
     @FXML
-    private void close(ActionEvent event) {
+    private void clickOverallAttendance(ActionEvent event) throws IOException {
+        if (btn_view_overall_attendance != null) {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/attendancesystem/gui/view/OverallAttendance.fxml"));
+            Parent root = loader.load();
+            OverallAttendanceController oactrl = loader.getController();
+
+            Scene scene = new Scene(root);
+            Stage stage = new Stage();
+            stage.setScene(scene);
+            stage.show();
+
+            stage.setMaximized(true);
+        }
+    }
+
+    @FXML
+    private void clickClose(ActionEvent event) {
         Stage stage = (Stage) ((Node) ((EventObject) event).getSource()).getScene().getWindow();
         stage.close();
     }
-
-    @FXML
-    private void openOverrallAttendance(ActionEvent event) throws IOException {
-       
-        if(btn_view_overall_attendance!=null){
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/attendancesystem/gui/view/OverallAttendance.fxml"));
-        Parent root = loader.load();
-        OverallAttendanceController oactrl = loader.getController();        
-        
-        Scene scene = new Scene(root);
-        Stage stage = new Stage();
-        stage.setScene(scene);
-        stage.show();
-        
-        stage.setMaximized(true);
-        
-    }
-  }
-    
 }
