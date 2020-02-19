@@ -45,33 +45,32 @@ public class LoginStudentController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         lbl_wrong.setId("lbl_wrong");
-    }    
+    }
 
     @FXML
     private void makeLogin(ActionEvent event) throws IOException {
-        
-       String user = username.getText();
-       String pass = password.getText();
-       if(user.equals("Student")&&pass.equals("password"))
-        {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/attendancesystem/gui/view/StudentRecordAttendance.fxml"));
-        Parent root = loader.load();
-        StudentRecordAttendanceController srctrl = loader.getController();
-        
-        Scene scene = new Scene(root);
-        Stage stage = new Stage();
-        stage.setScene(scene);
-        stage.show();
-        } else 
-        lbl_wrong.setText("Wrong password or username");
-            login.pressedProperty();
+
+        String user = username.getText();
+        String pass = password.getText();
+        if (user.equals("Student") && pass.equals("password")){
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/attendancesystem/gui/view/StudentRecordAttendance.fxml"));
+            Parent root = loader.load();
+            StudentRecordAttendanceController srctrl = loader.getController();
+
+            Scene scene = new Scene(root);
+            Stage stage = new Stage();
+            stage.setScene(scene);
+            stage.show();
+
+        } else {
+            lbl_wrong.setText("Wrong password or username");
+        }
+        login.pressedProperty();
     }
 
     @FXML
     private void clickLogin(MouseEvent event) {
-     
+        Stage stage = (Stage) ((Node) ((EventObject) event).getSource()).getScene().getWindow();
+        stage.close();
     }
-    
-
-    
 }

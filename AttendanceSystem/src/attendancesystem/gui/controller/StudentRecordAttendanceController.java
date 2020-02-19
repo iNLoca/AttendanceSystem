@@ -55,12 +55,16 @@ public class StudentRecordAttendanceController implements Initializable {
     private JFXButton confirmbtn;
     @FXML
     private JFXTextArea absenttext;
-
+    
+    boolean clickPresentButton=false;
+    boolean clickAbsentButton=false;
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        
+        
         
      JFXListView<Label> list = new JFXListView<Label>();
      for(int i = 0 ; i < 4 ; i++) list.getItems().add(new Label("Item " + i));
@@ -69,12 +73,13 @@ public class StudentRecordAttendanceController implements Initializable {
 
     @FXML
     private void clickPresent(ActionEvent event) {
-        
+        clickPresentButton=true;        
        
     }
 
     @FXML
     private void clickAbsent(ActionEvent event) {
+        clickAbsentButton=true;
         
         
        absenttext.visibleProperty().bind(absentbtn.selectedProperty()); //The best line ever!!!

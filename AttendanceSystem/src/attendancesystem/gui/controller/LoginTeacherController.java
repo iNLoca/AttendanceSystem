@@ -11,14 +11,17 @@ import com.jfoenix.controls.JFXTextField;
 import java.io.IOException;
 import static java.lang.System.err;
 import java.net.URL;
+import java.util.EventObject;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
 /**
@@ -63,8 +66,14 @@ public class LoginTeacherController implements Initializable {
         }else
             wrongpass.setText("Wrong password or username");
             loginT.pressedProperty();
-        
-                               
+                                  
     }
+
+    @FXML
+    private void clickLogin(MouseEvent event) {
+        Stage stage = (Stage) ((Node) ((EventObject) event).getSource()).getScene().getWindow();
+        stage.close();
+    }
+
     
 }
