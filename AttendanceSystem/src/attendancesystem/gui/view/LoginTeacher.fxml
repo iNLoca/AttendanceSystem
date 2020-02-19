@@ -44,8 +44,6 @@
                   <Font size="17.0" />
                </font>
             </Label>
-
-            <JFXPasswordField fx:id="pass" alignment="TOP_LEFT" focusColor="#09b6bc" labelFloat="true" layoutX="203.0" layoutY="172.0" promptText="Password" />
             <Label fx:id="wrongpass" layoutX="184.0" layoutY="75.0" prefHeight="22.0" prefWidth="189.0" textFill="#ae0b0b" />
 
          </children>
