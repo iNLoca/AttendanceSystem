@@ -13,8 +13,7 @@
     -fx-font-size: 15px;
     -fx-font-family: "Arial";
     -fx-border-width: 2;  
-    -fx-border-color: #000;
-    
+    -fx-border-color: #000;    
 }
 
 .button:hover{
