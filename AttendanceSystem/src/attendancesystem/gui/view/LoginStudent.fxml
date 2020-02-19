@@ -11,32 +11,42 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="326.0" prefWidth="581.0" style="-fx-background-color: #C10D0E#C10D0E #C10D0E#C10D0E;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="attendancesystem.gui.controller.LoginStudentController">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" stylesheets="@loginstudentCSS.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="attendancesystem.gui.controller.LoginStudentController">
+
    <children>
-      <Pane layoutX="11.0" layoutY="36.0" prefHeight="277.0" prefWidth="557.0" style="-fx-background-color: #ffffff;">
+      <Pane layoutX="11.0" layoutY="36.0" prefHeight="277.0" prefWidth="557.0" style="-fx-background-color: #F3F2ED;" stylesheets="@loginstudentCSS.css" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
          <effect>
             <DropShadow />
          </effect>
          <children>
-            <Label layoutX="239.0" layoutY="45.0" prefHeight="22.0" prefWidth="80.0" text="Welcome">
+            <Label layoutX="210.0" layoutY="73.0" prefHeight="23.0" prefWidth="123.0" text="Welcome">
                <font>
                   <Font size="16.0" />
                </font>
             </Label>
-            <JFXTextField fx:id="username" focusColor="#09b6bc" labelFloat="true" layoutX="204.0" layoutY="112.0" promptText="Username" />
-            <JFXButton fx:id="login" buttonType="RAISED" layoutX="455.0" layoutY="224.0" onAction="#makeLogin" onMouseClicked="#clickLogin" prefHeight="27.0" prefWidth="62.0" ripplerFill="#d7feff" style="-fx-background-color: #C10D0E#C10D0E #C10D0E#C10D0E;" text="Log In" />
-            <ImageView fitHeight="39.0" fitWidth="142.0" layoutX="401.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+
+            <JFXTextField fx:id="username" focusColor="BLACK" labelFloat="true" layoutX="173.0" layoutY="141.0" prefHeight="40.0" prefWidth="200.0" promptText="Username">
+               <font>
+                  <Font size="14.0" />
+               </font></JFXTextField>
+            <JFXButton fx:id="login" buttonType="RAISED" layoutX="475.0" layoutY="307.0" onAction="#makeLogin" onMouseClicked="#clickLogin" prefHeight="40.0" prefWidth="70.0" ripplerFill="#fff379" text="Log In" />
+            <ImageView fitHeight="39.0" fitWidth="142.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+
                <image>
                   <Image url="@../../../icons/logo.png" />
                </image>
             </ImageView>
-            <JFXPasswordField fx:id="password" focusColor="#09b6bc" labelFloat="true" layoutX="204.0" layoutY="172.0" promptText="Password" />
+            <JFXPasswordField fx:id="password" focusColor="BLACK" labelFloat="true" layoutX="173.0" layoutY="222.0" prefHeight="40.0" prefWidth="200.0" promptText="Password">
+               <font>
+                  <Font size="14.0" />
+               </font></JFXPasswordField>
+            <Label layoutX="189.0" layoutY="34.0" prefHeight="23.0" prefWidth="165.0" text="Hello, Student!">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
          </children>
       </Pane>
-      <Label layoutX="51.0" layoutY="13.0" prefHeight="14.0" prefWidth="123.0" text="Hello, Student!">
-         <font>
-            <Font size="17.0" />
-         </font>
-      </Label>
+
    </children>
 </AnchorPane>

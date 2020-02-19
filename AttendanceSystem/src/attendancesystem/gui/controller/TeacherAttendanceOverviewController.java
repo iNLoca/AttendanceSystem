@@ -16,11 +16,6 @@ import javafx.scene.control.TableView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.shape.Rectangle;
 
-/**
- * FXML Controller class
- *
- * @author Francesco
- */
 public class TeacherAttendanceOverviewController implements Initializable {
 
     @FXML
@@ -47,7 +42,6 @@ public class TeacherAttendanceOverviewController implements Initializable {
     private Label text3;
     @FXML
     private Label lblStatus;
-    @FXML
     private Rectangle rectangle;
 
     /**
@@ -75,6 +69,7 @@ public class TeacherAttendanceOverviewController implements Initializable {
         className.setId("className");
         students.getStyleClass().add("students");
         teacherName.setId("teacherName");
+        
     }    
     
 }
