@@ -22,6 +22,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import static javafx.scene.paint.Color.color;
 import javafx.stage.Stage;
@@ -63,14 +64,49 @@ public class StudentRecordAttendanceController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+    
+        listview.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
+            // = newValue;
+           listview.setCellFactory(sde2 -> new JFXListCell<>());
+           sde2.isPressed();
+        });
+      
+     /*   
+      listview.listViewProperty().addListener((listObj, oldList, newList) -> {
+  if (newList != null) {
+   
+      JFXListView<String>listview newList.addListener((o, oldVal, newVal) -> {
         
+        if (newVal.doubleValue() != 0) {
         
+         
+          });
+      listview.selectedProperty().addListener((o, oldVal, newVal) -> {
+        if (newVal) {
+          selectionChanged = true;
         
-     JFXListView<Label> list = new JFXListView<Label>();
-     for(int i = 0 ; i < 4 ; i++) list.getItems().add(new Label("Item " + i));
-     list.getStyleClass().add("StudentRecord.css");
-    }    
+     /*   
+     JFXListView<String> listview = new JFXListView<String>();
+     for(int i = 0 ; i < 4 ; i++) listview.getItems().add("sde2,sco2,dbo,ito");
+     JFXListCell<String>sde2 = new JFXListCell<String>();
+     listview.addListCell(sde2);
+    
+     listview.getStyleClass().add("StudentRecord.css");
+    /*
+     
+      listview.setOnItemSelectedListener(new listview.OnItemSelectedListener(){
+      @Override 
+      public void onItemSelected(JFXListCell<String> sde2){
+     
+     }
+     @Override
+      public void onNothingSelected(listview<?>parent){
+      
+      }
+    } );
+     */  
 
+    }
     @FXML
     private void clickPresent(ActionEvent event) {
         clickPresentButton=true;              
@@ -97,7 +133,21 @@ public class StudentRecordAttendanceController implements Initializable {
         Stage stage = new Stage();
         stage.setScene(scene);
         stage.show();
-   
+        
+        
    }
 
+    @FXML
+    private void clicksde2(MouseEvent event) {
+                
+        if (sde2 != null) {
+       
+        sde2.isPressed();
+    }else 
+        {
+        sde2.setText("WrongAGIAN");
+        }
+        System.out.println("Wrong");
+
+    }
 }

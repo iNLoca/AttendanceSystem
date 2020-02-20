@@ -29,8 +29,8 @@
                </effect>
             </JFXCheckBox>
 
-            <JFXCheckBox fx:id="absentbtn" checkedColor="#9c1026" layoutX="538.0" layoutY="113.0" onAction="#clickAbsent" prefHeight="18.0" prefWidth="75.0" text="Absent" unCheckedColor="#2e98fb" viewOrder="1.0">
-
+           
+            
             <JFXCheckBox fx:id="absentbtn" checkedColor="#9c1026" layoutX="563.0" layoutY="180.0" onAction="#clickAbsent" prefHeight="18.0" prefWidth="75.0" text="Absent" unCheckedColor="#2e98fb">
 
                <effect>
@@ -43,7 +43,7 @@
                   <Font name="Didot" size="19.0" />
                </font>
             </Label>
-            <JFXListCell fx:id="sde2" alignment="CENTER" layoutX="39.0" layoutY="271.0" prefHeight="35.0" prefWidth="142.0" style="-fx-border-color: #2e98fb#2e98fb;" text="SDE 2">
+            <JFXListCell fx:id="sde2" accessibleRole="BUTTON" alignment="CENTER" layoutX="39.0" layoutY="271.0" onMouseClicked="#clicksde2" prefHeight="35.0" prefWidth="142.0" style="-fx-border-color: #2e98fb#2e98fb;" text="SDE 2">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>
