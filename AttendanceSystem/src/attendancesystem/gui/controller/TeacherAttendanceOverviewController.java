@@ -26,8 +26,9 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.shape.Rectangle;
 
 public class TeacherAttendanceOverviewController implements Initializable {
-
     
+    SimpleManager manager = new SimpleManager();
+
     @FXML
     private JFXDatePicker calendar;
     @FXML
@@ -54,27 +55,25 @@ public class TeacherAttendanceOverviewController implements Initializable {
     private Label text3;
     @FXML
     private Label lblStatus;
-    SimpleManager manager = new SimpleManager();
-    
-    
+    @FXML
+    private Label lbl_popup;
 
-   
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        text3.setId("text3"); 
+        lbl_popup.setVisible(false);
+        text1.setVisible(false);
+        reasonForAbsence.setVisible(false);
+        text2.setVisible(false);
+        percentageOfAbsence.setVisible(false);
+        text3.setId("text3");
         exit.setId("exit");
-        
-       
         reasonForAbsence.setId("reasonForAbsence");
-        className.setId("className");       
+        className.setId("className");
         teacherName.setId("teacherName");
         ObservableList<Student> tableItems = FXCollections.observableArrayList(manager.getAllStudents());
-         studentsColumn.setCellValueFactory(new PropertyValueFactory<>("name"));
+        studentsColumn.setCellValueFactory(new PropertyValueFactory<>("name"));
         students.setItems(tableItems);
-       
-        
-    
-    }    
+    }
 
     @FXML
     private void selectedStudent(MouseEvent event) {
@@ -82,15 +81,24 @@ public class TeacherAttendanceOverviewController implements Initializable {
         String value =calendar.getValue().toString();
         if(studentName!=null && value!=null) {
             if(studentName.equals("Rocio")||studentName.equals("Nadia")||studentName.equals("Francesco")){
+            text2.setVisible(true);
+            percentageOfAbsence.setVisible(true);
             lblStatus.setId("lblStatusGreen");
             reasonForAbsence.setText("");
+            percentageOfAbsence.setText("12");
         }
             else{
-              reasonForAbsence.setText("I was sick");
+            text1.setVisible(true);
+            reasonForAbsence.setVisible(true);
+            text2.setVisible(true);
+            percentageOfAbsence.setVisible(true);
+            reasonForAbsence.setText("I was sick");
             lblStatus.setId("lblStatusRed");
+            percentageOfAbsence.setText("24");
             }
         }
-
+        else {
+         lbl_popup.setVisible(true);
+        }
     }
-    
 }

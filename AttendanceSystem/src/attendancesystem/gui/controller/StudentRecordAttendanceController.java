@@ -7,6 +7,7 @@ package attendancesystem.gui.controller;
 
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXCheckBox;
+import com.jfoenix.controls.JFXDatePicker;
 import com.jfoenix.controls.JFXListCell;
 import com.jfoenix.controls.JFXListView;
 import com.jfoenix.controls.JFXTextArea;
@@ -14,6 +15,8 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.EventObject;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -22,6 +25,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.control.SelectionMode;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import static javafx.scene.paint.Color.color;
@@ -41,21 +45,16 @@ public class StudentRecordAttendanceController implements Initializable {
     private JFXCheckBox presentbtn;
     @FXML
     private JFXCheckBox absentbtn;
-    
     @FXML
-    private JFXListView<Label> listview;
-    @FXML
-    private JFXListCell<Label> sde2;
-    @FXML
-    private JFXListCell<Label> sco2;
-    @FXML
-    private JFXListCell<Label> dbo;
-    @FXML
-    private JFXListCell<Label> ito;
+    private JFXListView<String> listview;
     @FXML
     private JFXButton confirmbtn;
     @FXML
     private JFXTextArea absenttext;
+    @FXML
+    private JFXDatePicker dp;
+    @FXML
+    private Label lbl_popup;
     
 
     /**
@@ -63,13 +62,21 @@ public class StudentRecordAttendanceController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        absenttext.visibleProperty().set(false);
+        lbl_popup.setVisible(false);
+        listview.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
+        listview.getItems().add("DB/OS");
+        listview.getItems().add("ITO2");
+        listview.getItems().add("SCO2");
+        listview.getItems().add("SDE2");
     
-        listview.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
-            // = newValue;
-           listview.setCellFactory(sde2 -> new JFXListCell<>());
-           sde2.isPressed();
-        });
-      
+//        listview.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
+//            // = newValue;
+//           listview.setCellFactory(sde2 -> new JFXListCell<>());
+//           sde2.isPressed();
+           
+        //});
+
      /*   
       listview.listViewProperty().addListener((listObj, oldList, newList) -> {
   if (newList != null) {
@@ -107,20 +114,16 @@ public class StudentRecordAttendanceController implements Initializable {
 
     }
     @FXML
-    private void clickPresent(ActionEvent event) {
+    private void clickPresent(ActionEvent event){
        absentbtn.setSelected(false);
-        
+       if(dp.getValue()==null)lbl_popup.setVisible(true);
+       else lbl_popup.setVisible(false);
     }
 
     @FXML
     private void clickAbsent(ActionEvent event) {
-       presentbtn.setSelected(false);
-       
-        
-        
-        
+       presentbtn.setSelected(false);  
        absenttext.visibleProperty().bind(absentbtn.selectedProperty()); //The best line ever!!!
-       
     }
 
     @FXML
@@ -139,17 +142,4 @@ public class StudentRecordAttendanceController implements Initializable {
         
    }
 
-    @FXML
-    private void clicksde2(MouseEvent event) {
-                
-        if (sde2 != null) {
-       
-        sde2.isPressed();
-    }else 
-        {
-        sde2.setText("WrongAGIAN");
-        }
-        System.out.println("Wrong");
-
-    }
 }
