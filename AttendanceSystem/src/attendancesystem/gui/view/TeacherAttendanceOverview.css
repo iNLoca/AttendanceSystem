@@ -31,10 +31,10 @@ and open the template in the editor.
   -fx-text-fill: black;
   -fx-font-weight: bold;
 }
-.label{
-   
+.label{   
     -fx-font-family: 'Arial';
     -fx-font-weight: bolder;
+    -fx-font-size: 25px;
 }
 #reasonForAbsence{
     -fx-background-color: whitesmoke;
@@ -43,7 +43,6 @@ and open the template in the editor.
      -fx-border-color: gray;
 }
 #teacherName{
-    
     -fx-font-family: 'Arial';
     -fx-text-fill: black;
     -fx-font-size: 25px;

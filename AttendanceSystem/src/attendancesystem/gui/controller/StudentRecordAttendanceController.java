@@ -73,8 +73,7 @@ public class StudentRecordAttendanceController implements Initializable {
 
     @FXML
     private void clickPresent(ActionEvent event) {
-        clickPresentButton=true;        
-       
+        clickPresentButton=true;              
     }
 
     @FXML
