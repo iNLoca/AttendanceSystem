@@ -17,7 +17,7 @@
    <children>
       <Pane layoutX="20.0" layoutY="58.0" prefHeight="531.0" prefWidth="884.0" style="-fx-background-color: #F3F2ED #F3F2ED;" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
          <children>
-            <Label layoutX="57.0" layoutY="106.0" prefHeight="46.0" prefWidth="447.0" text="Please select your status for the subjects on">
+            <Label layoutX="57.0" layoutY="106.0" prefHeight="46.0" prefWidth="447.0" text="Please, select your status for the subjects on">
                <font>
                   <Font name="Didot" size="25.0" />
                </font>
@@ -57,6 +57,7 @@
                   <Image url="@../../../icons/logo.png" />
                </image>
             </ImageView>
+            <Label fx:id="lbl_popup" layoutX="298.0" layoutY="209.0" prefHeight="23.0" prefWidth="264.0" textAlignment="CENTER" />
          </children>
       </Pane>
    </children>
