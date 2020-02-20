@@ -57,7 +57,7 @@
                   <Image url="@../../../icons/logo.png" />
                </image>
             </ImageView>
-            <Label fx:id="lbl_popup" layoutX="298.0" layoutY="209.0" prefHeight="23.0" prefWidth="264.0" textAlignment="CENTER" />
+            <Label fx:id="lbl_popup" layoutX="298.0" layoutY="209.0" prefHeight="23.0" prefWidth="264.0" text="Please, select the date first" textAlignment="CENTER" />
          </children>
       </Pane>
    </children>
