@@ -5,10 +5,14 @@
  */
 package attendancesystem.dal;
 
+import be.Student;
+import java.util.List;
+
 /**
  *
  * @author mac
  */
 public interface IDAOMock {
     
+    public List <Student> getAllStudents();    
 }

@@ -5,14 +5,21 @@
  */
 package attendancesystem.gui.controller;
 
+import attendancesystem.bll.SimpleManager;
+import be.Student;
 import java.net.URL;
+import java.util.List;
 import java.util.ResourceBundle;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
+import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.shape.Rectangle;
 
@@ -33,7 +40,9 @@ public class TeacherAttendanceOverviewController implements Initializable {
     @FXML
     private Label className;
     @FXML
-    private TableView<?> students;
+    private TableView<Student> students;
+    @FXML
+    private TableColumn<String, String> studentsColumn;
     @FXML
     private Label text2;
     @FXML
@@ -42,34 +51,24 @@ public class TeacherAttendanceOverviewController implements Initializable {
     private Label text3;
     @FXML
     private Label lblStatus;
-    private Rectangle rectangle;
+    SimpleManager manager = new SimpleManager();
+    
 
-    /**
-     * Initializes the controller class.
-     */
+   
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        text1.getStyleClass().add("text1");
-        text2.getStyleClass().add("text2");
-        text3.getStyleClass().add("text3");
-        text3.setId("text3");
-        calendar.getStyleClass().add("calendar");
-        exit.getStyleClass().add("exit");
+        text3.setId("text3"); 
         exit.setId("exit");
-        reasonForAbsence.getStyleClass().add("reasonForAbsence");
         reasonForAbsence.setId("reasonForAbsence");
-        lblStatus.getStyleClass().add("lblStatus");
         lblStatus.setId("lblStatus");
-
-       
-       
-        percentageOfAbsence.getStyleClass().add("percentageOfAbsence");
-        teacherName.getStyleClass().add("teacherName");
-        className.getStyleClass().add("className");
-        className.setId("className");
-        students.getStyleClass().add("students");
+        className.setId("className");       
         teacherName.setId("teacherName");
+        ObservableList<Student> tableItems = FXCollections.observableArrayList(manager.getAllStudents());
+         studentsColumn.setCellValueFactory(new PropertyValueFactory<>("name"));
+        students.setItems(tableItems);
+       
         
+    
     }    
     
 }
