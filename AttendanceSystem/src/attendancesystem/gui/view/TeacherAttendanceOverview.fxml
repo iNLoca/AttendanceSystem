@@ -10,9 +10,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" fx:id="pane" prefHeight="458.0" prefWidth="675.0" stylesheets="@TeacherAttendanceOverview.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="attendancesystem.gui.controller.TeacherAttendanceOverviewController">
+<AnchorPane id="AnchorPane" fx:id="pane" prefHeight="600.0" prefWidth="800.0" stylesheets="@TeacherAttendanceOverview.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="attendancesystem.gui.controller.TeacherAttendanceOverviewController">
    <children>
-      <AnchorPane layoutX="20.0" layoutY="40.0" prefHeight="410.0" prefWidth="608.0" style="-fx-background-color: lightgrey;" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+      <AnchorPane layoutX="20.0" layoutY="40.0" prefHeight="410.0" prefWidth="608.0" style="-fx-background-color: #F3F2ED;" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
          <children>
             <JFXButton fx:id="exit" buttonType="RAISED" layoutX="556.0" layoutY="316.0" ripplerFill="#009fe3" text="Close" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="5.0" />
             <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="421.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="7.0" AnchorPane.topAnchor="7.0">
@@ -21,7 +21,7 @@
                </image>
             </ImageView>
             <Label fx:id="className" layoutX="44.0" layoutY="20.0" stylesheets="@TeacherAttendanceOverview.css" text="Class Name" />
-            <TableView fx:id="students" layoutX="15.0" layoutY="50.0" prefHeight="337.0" prefWidth="128.0">
+            <TableView fx:id="students" layoutX="15.0" layoutY="50.0" prefHeight="497.0" prefWidth="128.0">
                <columns>
                   <TableColumn prefWidth="75.0" text="Students" />
                </columns>
@@ -29,10 +29,10 @@
                   <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
                </columnResizePolicy>
             </TableView>
-            <Label fx:id="reasonForAbsence" layoutX="183.0" layoutY="287.0" prefHeight="64.0" prefWidth="311.0" stylesheets="@TeacherAttendanceOverview.css" text="    I was sick" />
-            <Label fx:id="text2" layoutX="183.0" layoutY="370.0" prefHeight="17.0" prefWidth="281.0" text="Total absence percentage:       %" />
-            <Label fx:id="percentageOfAbsence" layoutX="343.0" layoutY="366.0" prefHeight="25.0" prefWidth="24.0" text="24" />
-            <Label fx:id="text1" layoutX="183.0" layoutY="259.0" stylesheets="@TeacherAttendanceOverview.css" text="Reason For Absence" />
+            <Label fx:id="reasonForAbsence" layoutX="183.0" layoutY="420.0" prefHeight="64.0" prefWidth="311.0" stylesheets="@TeacherAttendanceOverview.css" text="    I was sick" />
+            <Label fx:id="text2" layoutX="183.0" layoutY="503.0" prefHeight="17.0" prefWidth="281.0" text="Total absence percentage:       %" />
+            <Label fx:id="percentageOfAbsence" layoutX="343.0" layoutY="499.0" prefHeight="25.0" prefWidth="24.0" text="24" />
+            <Label fx:id="text1" layoutX="183.0" layoutY="392.0" stylesheets="@TeacherAttendanceOverview.css" text="Reason For Absence" />
             <Label fx:id="text3" layoutX="218.0" layoutY="13.0" prefHeight="30.0" prefWidth="69.0" text="Hello">
                <font>
                   <Font size="14.0" />
