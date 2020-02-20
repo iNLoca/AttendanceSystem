@@ -16,6 +16,8 @@ public class Student {
     public Student(String name){
     this.name=name;
     }
+    public Student(){}
+    
     public String getName() {
         return name;
     }
