@@ -36,7 +36,7 @@
                   <Bloom />
                </effect>
             </JFXCheckBox>
-            <JFXListView fx:id="listview" layoutX="36.0" layoutY="261.0" prefHeight="213.0" prefWidth="148.0" style="-fx-border-color: #2e98fb#2e98fb; -fx-effect: Bloom;" stylesheets="@StudentRecord.css" />
+            <JFXListView fx:id="listview" layoutX="36.0" layoutY="261.0" prefHeight="161.0" prefWidth="148.0" style="-fx-border-color: #2e98fb#2e98fb; -fx-effect: Bloom;" stylesheets="@StudentRecord.css" />
             <Label fx:id="Label" layoutX="39.0" layoutY="232.0" prefHeight="29.0" prefWidth="110.0" text="Courses:">
                <font>
                   <Font name="Didot" size="19.0" />
