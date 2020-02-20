@@ -15,7 +15,7 @@ import java.util.List;
  */
 public class DAOMock implements IDAOMock {
     
-    Student std1 = new Student("Rocío");
+    Student std1 = new Student("Rocio");
     Student std2 = new Student("Nadia");
     Student std3 = new Student("Francesco");
     Student std4 = new Student("Mario");

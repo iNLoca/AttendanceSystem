@@ -7,6 +7,7 @@ package attendancesystem.gui.controller;
 
 import attendancesystem.bll.SimpleManager;
 import be.Student;
+import com.jfoenix.controls.JFXDatePicker;
 import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
@@ -20,13 +21,15 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.shape.Rectangle;
 
 public class TeacherAttendanceOverviewController implements Initializable {
 
+    
     @FXML
-    private DatePicker calendar;
+    private JFXDatePicker calendar;
     @FXML
     private Label reasonForAbsence;
     @FXML
@@ -53,14 +56,16 @@ public class TeacherAttendanceOverviewController implements Initializable {
     private Label lblStatus;
     SimpleManager manager = new SimpleManager();
     
+    
 
    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         text3.setId("text3"); 
         exit.setId("exit");
+        
+       
         reasonForAbsence.setId("reasonForAbsence");
-        lblStatus.setId("lblStatus");
         className.setId("className");       
         teacherName.setId("teacherName");
         ObservableList<Student> tableItems = FXCollections.observableArrayList(manager.getAllStudents());
@@ -70,5 +75,23 @@ public class TeacherAttendanceOverviewController implements Initializable {
         
     
     }    
+
+    @FXML
+    private void selectedStudent(MouseEvent event) {
+
+        String studentName= students.getSelectionModel().getSelectedItem().getName();
+        String value =calendar.getValue().toString();
+        if(studentName!=null && value!=null) {
+            if(studentName.equals("Rocio")||studentName.equals("Nadia")||studentName.equals("Francesco")){
+            lblStatus.setId("lblStatusGreen");
+            reasonForAbsence.setText("");
+        }
+            else{
+              reasonForAbsence.setText("I was sick");
+            lblStatus.setId("lblStatusRed");
+            }
+        }
+
+    }
     
 }

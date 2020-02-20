@@ -57,8 +57,7 @@ public class StudentRecordAttendanceController implements Initializable {
     @FXML
     private JFXTextArea absenttext;
     
-    boolean clickPresentButton=false;
-    boolean clickAbsentButton=false;
+
     /**
      * Initializes the controller class.
      */
@@ -109,12 +108,15 @@ public class StudentRecordAttendanceController implements Initializable {
     }
     @FXML
     private void clickPresent(ActionEvent event) {
-        clickPresentButton=true;              
+       absentbtn.setSelected(false);
+        
     }
 
     @FXML
     private void clickAbsent(ActionEvent event) {
-        clickAbsentButton=true;
+       presentbtn.setSelected(false);
+       
+        
         
         
        absenttext.visibleProperty().bind(absentbtn.selectedProperty()); //The best line ever!!!
