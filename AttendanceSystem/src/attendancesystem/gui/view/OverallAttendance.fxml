@@ -16,8 +16,7 @@
         <URL value="@overallattendanceCSS.css" />
     </stylesheets>
    <children>
-      <JFXButton fx:id="btn_close" buttonType="RAISED" layoutX="803.0" layoutY="661.0" onAction="#clickClose" prefHeight="31.0" prefWidth="90.0" ripplerFill="#fff379" text="Close" AnchorPane.bottomAnchor="8.0" AnchorPane.rightAnchor="7.0" />
-      <AnchorPane layoutX="17.0" layoutY="19.0" prefHeight="628.0" prefWidth="867.0" style="-fx-background-color: #F3F2ED;" AnchorPane.bottomAnchor="53.0" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="19.0">
+      <AnchorPane layoutX="17.0" layoutY="19.0" prefHeight="628.0" prefWidth="867.0" style="-fx-background-color: #F3F2ED;" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
          <children>
             <TabPane layoutX="4.0" layoutY="51.0" prefHeight="569.0" prefWidth="848.0" style="-fx-border-color: #a6000f #a6000f; -fx-border-width: 2;" tabClosingPolicy="UNAVAILABLE">
               <tabs>
@@ -96,6 +95,7 @@
                   <Image url="@../../../icons/logo.png" />
                </image>
             </ImageView>
+            <JFXButton fx:id="btn_close" buttonType="RAISED" layoutX="765.0" layoutY="625.0" onAction="#clickClose" prefHeight="31.0" prefWidth="90.0" ripplerFill="#fff379" text="Close" AnchorPane.bottomAnchor="4.0" AnchorPane.rightAnchor="5.0" />
          </children>
       </AnchorPane>
    </children>
