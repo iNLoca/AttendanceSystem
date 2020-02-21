@@ -116,7 +116,7 @@ public class StudentRecordAttendanceController implements Initializable {
     private void clickAbsent(ActionEvent event) {
         clickAbsentButton=true;
         
-        
+       
        absenttext.visibleProperty().bind(absentbtn.selectedProperty()); //The best line ever!!!
        
     }
