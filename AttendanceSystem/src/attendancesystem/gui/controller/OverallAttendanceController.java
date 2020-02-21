@@ -23,10 +23,6 @@ import javafx.stage.Stage;
 public class OverallAttendanceController implements Initializable {
 
     @FXML
-    private Label lbl_totalpresence;
-    @FXML
-    private Label lbl_totalabsence;
-    @FXML
     private Button btn_close;
     @FXML
     private PieChart overAllChart;

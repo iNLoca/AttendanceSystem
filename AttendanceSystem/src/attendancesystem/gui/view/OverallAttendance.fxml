@@ -7,40 +7,31 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.text.Font?>
 
 <AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="900.0" style="-fx-background-color: #a6000f;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="attendancesystem.gui.controller.OverallAttendanceController">
     <stylesheets>
         <URL value="@overallattendanceCSS.css" />
     </stylesheets>
    <children>
-      <JFXButton fx:id="btn_close" buttonType="RAISED" onAction="#clickClose" ripplerFill="#fff379" text="Close" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="5.0" />
-      <AnchorPane layoutX="30.0" layoutY="23.0" prefHeight="642.0" prefWidth="863.0" style="-fx-background-color: #F3F2ED;" AnchorPane.bottomAnchor="38.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="17.0" AnchorPane.topAnchor="20.0">
+      <JFXButton fx:id="btn_close" buttonType="RAISED" layoutX="803.0" layoutY="661.0" onAction="#clickClose" prefHeight="31.0" prefWidth="90.0" ripplerFill="#fff379" text="Close" AnchorPane.bottomAnchor="8.0" AnchorPane.rightAnchor="7.0" />
+      <AnchorPane layoutX="17.0" layoutY="19.0" prefHeight="628.0" prefWidth="867.0" style="-fx-background-color: #F3F2ED;" AnchorPane.bottomAnchor="53.0" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="19.0">
          <children>
-            <Label fx:id="lbl_totalpresence" layoutX="365.0" layoutY="114.0" text="Total % of presence" textFill="#0f57e8" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="15.0">
-               <font>
-                  <Font size="8.0" />
-               </font>
-            </Label>
-            <Label fx:id="lbl_totalabsence" layoutX="365.0" layoutY="114.0" text="Total % of absence" textFill="#177c43" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="45.0">
-               <font>
-                  <Font size="10.0" />
-               </font>
-            </Label>
-            <TabPane layoutX="7.0" layoutY="88.0" prefHeight="521.0" prefWidth="841.0" tabClosingPolicy="UNAVAILABLE">
+            <TabPane layoutX="4.0" layoutY="51.0" prefHeight="569.0" prefWidth="848.0" style="-fx-border-color: #a6000f #a6000f; -fx-border-width: 2;" tabClosingPolicy="UNAVAILABLE">
               <tabs>
-                <Tab text="OverAll">
+                <Tab style="-fx-border: #a6000f;" text="OverAll">
                   <content>
                     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                            <children>
                               <Label layoutX="365.0" layoutY="43.0" text="Overall" AnchorPane.leftAnchor="365.0" AnchorPane.topAnchor="43.0" />
-                              <PieChart fx:id="overAllChart" layoutX="264.0" layoutY="189.0" prefHeight="236.0" prefWidth="270.0" />
+                              <PieChart fx:id="overAllChart" layoutX="256.0" layoutY="146.0" prefHeight="279.0" prefWidth="306.0" />
                            </children>
                         </AnchorPane>
                   </content>
                 </Tab>
-                <Tab text="Subjects">
+                <Tab style="-fx-border: #a6000f;" text="Subjects">
                   <content>
                     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                            <children>
@@ -50,7 +41,7 @@
                                     <PieChart fx:id="sdeChart1" prefHeight="150.0" prefWidth="27.0" />
                                  </graphic>
                               </Label>
-                              <Label layoutX="86.0" layoutY="112.0" prefHeight="150.0" prefWidth="268.0" text="SCO2" AnchorPane.bottomAnchor="226.0" AnchorPane.leftAnchor="86.0">
+                              <Label layoutX="86.0" layoutY="138.0" prefHeight="150.0" prefWidth="268.0" text="SCO2" AnchorPane.bottomAnchor="268.0" AnchorPane.leftAnchor="86.0">
                                  <graphic>
                                     <PieChart fx:id="dbosChart1" prefHeight="43.0" prefWidth="45.0" />
                                  </graphic>
@@ -60,7 +51,7 @@
                                     <PieChart fx:id="itoChart1" prefHeight="135.0" prefWidth="191.0" />
                                  </graphic>
                               </Label>
-                              <Label layoutX="86.0" layoutY="308.0" text="DB/OS" AnchorPane.leftAnchor="86.0" AnchorPane.topAnchor="308.0">
+                              <Label layoutX="95.0" layoutY="334.0" text="DB/OS" AnchorPane.leftAnchor="95.0" AnchorPane.topAnchor="334.0">
                                  <graphic>
                                     <PieChart fx:id="scoChart1" prefHeight="54.0" prefWidth="84.0" />
                                  </graphic>
@@ -69,27 +60,27 @@
                         </AnchorPane>
                   </content>
                 </Tab>
-                  <Tab text="By Date">
+                  <Tab style="-fx-border: #a6000f;" text="Sort by Date">
                     <content>
                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #F3F2ED #F3F2ED;">
                            <children>
                               <JFXDatePicker defaultColor="#a6000f" layoutX="192.0" layoutY="29.0" prefHeight="9.0" prefWidth="481.0" AnchorPane.leftAnchor="192.0" AnchorPane.rightAnchor="168.0" AnchorPane.topAnchor="29.0" />
-                              <Label layoutX="494.0" layoutY="141.0" text="SDE2" AnchorPane.bottomAnchor="197.0" AnchorPane.rightAnchor="90.0">
+                              <Label layoutX="515.0" layoutY="151.0" text="SDE2" AnchorPane.bottomAnchor="255.0" AnchorPane.rightAnchor="69.0">
                                  <graphic>
                                     <PieChart fx:id="scoChart2" prefHeight="150.0" prefWidth="27.0" />
                                  </graphic>
                               </Label>
-                              <Label layoutX="112.0" layoutY="117.0" text="SCO2" AnchorPane.bottomAnchor="221.0" AnchorPane.leftAnchor="112.0">
+                              <Label layoutX="88.0" layoutY="141.0" text="SCO2" AnchorPane.bottomAnchor="265.0" AnchorPane.leftAnchor="88.0">
                                  <graphic>
                                     <PieChart fx:id="sdeChart2" prefHeight="150.0" prefWidth="27.0" />
                                  </graphic>
                               </Label>
-                              <Label layoutX="520.0" layoutY="291.0" text="ITO2" AnchorPane.rightAnchor="72.0" AnchorPane.topAnchor="291.0">
+                              <Label layoutX="523.0" layoutY="344.0" text="ITO2" AnchorPane.rightAnchor="69.0" AnchorPane.topAnchor="344.0">
                                  <graphic>
                                     <PieChart fx:id="dbosChart2" prefHeight="150.0" prefWidth="27.0" />
                                  </graphic>
                               </Label>
-                              <Label layoutX="123.0" layoutY="280.0" text="DB/OS" AnchorPane.leftAnchor="123.0" AnchorPane.topAnchor="280.0">
+                              <Label layoutX="79.0" layoutY="358.0" text="DB/OS" AnchorPane.leftAnchor="79.0" AnchorPane.topAnchor="358.0">
                                  <graphic>
                                     <PieChart fx:id="itoChart2" prefHeight="150.0" prefWidth="27.0" />
                                  </graphic>
@@ -100,6 +91,11 @@
                   </Tab>
               </tabs>
             </TabPane>
+            <ImageView fitHeight="42.0" fitWidth="212.0" layoutX="674.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../icons/logo.png" />
+               </image>
+            </ImageView>
          </children>
       </AnchorPane>
    </children>
