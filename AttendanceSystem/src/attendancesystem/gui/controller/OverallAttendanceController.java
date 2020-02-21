@@ -29,8 +29,6 @@ public class OverallAttendanceController implements Initializable {
     @FXML
     private Button btn_close;
     @FXML
-    private AnchorPane anchorpaneLeft;
-    @FXML
     private PieChart overAllChart;
     @FXML
     private PieChart dbosChart1;
