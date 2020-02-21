@@ -122,8 +122,6 @@ public class StudentRecordAttendanceController implements Initializable {
 
     @FXML
     private void clickAbsent(ActionEvent event) {
-
-        clickAbsentButton=true;
         
        
 
