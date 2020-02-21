@@ -83,6 +83,8 @@ public class TeacherAttendanceOverviewController implements Initializable {
         if (studentName != null && value != null) {
             if (studentName.equals("Rocio") || studentName.equals("Nadia") || studentName.equals("Francesco")) {
                 text2.setVisible(true);
+                text1.setVisible(false);
+                reasonForAbsence.setVisible(false);
                 percentageOfAbsence.setVisible(true);
                 lblStatus.setId("lblStatusGreen");
                 reasonForAbsence.setText("");
