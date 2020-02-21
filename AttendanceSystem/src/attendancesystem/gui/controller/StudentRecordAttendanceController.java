@@ -8,15 +8,12 @@ package attendancesystem.gui.controller;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXCheckBox;
 import com.jfoenix.controls.JFXDatePicker;
-import com.jfoenix.controls.JFXListCell;
 import com.jfoenix.controls.JFXListView;
 import com.jfoenix.controls.JFXTextArea;
 import java.io.IOException;
 import java.net.URL;
 import java.util.EventObject;
 import java.util.ResourceBundle;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -26,16 +23,9 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.SelectionMode;
-import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
-import static javafx.scene.paint.Color.color;
 import javafx.stage.Stage;
 
-/**
- * FXML Controller class
- *
- * @author mac
- */
 public class StudentRecordAttendanceController implements Initializable {
 
     @FXML
@@ -108,7 +98,6 @@ public class StudentRecordAttendanceController implements Initializable {
       }
     } );
          */
-
     }
 
     @FXML
@@ -128,8 +117,8 @@ public class StudentRecordAttendanceController implements Initializable {
     }
 
     @FXML
-    private void clickConfirm(ActionEvent event) throws IOException{        
-         FXMLLoader loader = new FXMLLoader(getClass().getResource("/attendancesystem/gui/view/Confirmation.fxml"));
+    private void clickConfirm(ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/attendancesystem/gui/view/Confirmation.fxml"));
         Parent root = loader.load();
         ConfirmationController cctrl = loader.getController();
 
@@ -137,13 +126,11 @@ public class StudentRecordAttendanceController implements Initializable {
         Stage stage = new Stage();
         stage.setScene(scene);
         stage.show();
-        
     }
 
     @FXML
-    private void makeConfirm(MouseEvent event)  {
+    private void makeConfirm(MouseEvent event) {
         Stage stage = (Stage) ((Node) ((EventObject) event).getSource()).getScene().getWindow();
         stage.close();
     }
-
 }

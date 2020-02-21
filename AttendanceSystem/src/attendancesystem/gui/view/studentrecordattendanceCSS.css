@@ -17,13 +17,11 @@
 }
 
 .button:hover{
-  -fx-background-color: #FFF379;
-  -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);
-  -fx-text-fill: black;
-  -fx-font-weight: bold;
+    -fx-background-color: #FFF379;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
 }
-
-
 
 .label{
     -fx-font-family: "Arial";

@@ -9,7 +9,6 @@ import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
 import java.io.IOException;
-import static java.lang.System.err;
 import java.net.URL;
 import java.util.EventObject;
 import java.util.ResourceBundle;
@@ -24,11 +23,6 @@ import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
-/**
- * FXML Controller class
- *
- * @author mac
- */
 public class LoginTeacherController implements Initializable {
 
     @FXML
@@ -50,7 +44,6 @@ public class LoginTeacherController implements Initializable {
 
     @FXML
     private void makeLoginTeacher(ActionEvent event) throws IOException {
-
         String username = user.getText();
         String password = pass.getText();
         if (username.equals("Teacher") && password.equals("password")) {
@@ -77,5 +70,4 @@ public class LoginTeacherController implements Initializable {
             stage.close();
         }
     }
-
 }

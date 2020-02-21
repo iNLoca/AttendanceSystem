@@ -10,7 +10,6 @@ import be.Student;
 import com.jfoenix.controls.JFXDatePicker;
 import java.net.URL;
 import java.util.EventObject;
-import java.util.List;
 import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -19,18 +18,16 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
-import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
 
 public class TeacherAttendanceOverviewController implements Initializable {
-    
+
     SimpleManager manager = new SimpleManager();
 
     @FXML
@@ -81,21 +78,20 @@ public class TeacherAttendanceOverviewController implements Initializable {
 
     @FXML
     private void selectedStudent(MouseEvent event) {
-        String studentName= students.getSelectionModel().getSelectedItem().getName();
-        String value =calendar.getValue().toString();
-        if(studentName!=null && value!=null) {
-            if(studentName.equals("Rocio")||studentName.equals("Nadia")||studentName.equals("Francesco")){
-            text2.setVisible(true);
-            percentageOfAbsence.setVisible(true);
-            lblStatus.setId("lblStatusGreen");
-            reasonForAbsence.setText("");
-            percentageOfAbsence.setText("12");
-        }
-            else{
-            text1.setVisible(true);
-            reasonForAbsence.setVisible(true);
-            text2.setVisible(true);
-            percentageOfAbsence.setVisible(true);
+        String studentName = students.getSelectionModel().getSelectedItem().getName();
+        String value = calendar.getValue().toString();
+        if (studentName != null && value != null) {
+            if (studentName.equals("Rocio") || studentName.equals("Nadia") || studentName.equals("Francesco")) {
+                text2.setVisible(true);
+                percentageOfAbsence.setVisible(true);
+                lblStatus.setId("lblStatusGreen");
+                reasonForAbsence.setText("");
+                percentageOfAbsence.setText("12");
+            } else {
+                text1.setVisible(true);
+                reasonForAbsence.setVisible(true);
+                text2.setVisible(true);
+                percentageOfAbsence.setVisible(true);
                 reasonForAbsence.setText("I was sick");
                 lblStatus.setId("lblStatusRed");
                 percentageOfAbsence.setText("24");

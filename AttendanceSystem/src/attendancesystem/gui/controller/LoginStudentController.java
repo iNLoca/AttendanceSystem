@@ -49,10 +49,9 @@ public class LoginStudentController implements Initializable {
 
     @FXML
     private void makeLogin(ActionEvent event) throws IOException {
-
         String user = username.getText();
         String pass = password.getText();
-        if (user.equals("Student") && pass.equals("password")){
+        if (user.equals("Student") && pass.equals("password")) {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/attendancesystem/gui/view/StudentRecordAttendance.fxml"));
             Parent root = loader.load();
             StudentRecordAttendanceController srctrl = loader.getController();
@@ -72,9 +71,9 @@ public class LoginStudentController implements Initializable {
     private void clickLogin(MouseEvent event) {
         String user = username.getText();
         String pass = password.getText();
-        if (user.equals("Student") && pass.equals("password")){
-        Stage stage = (Stage) ((Node) ((EventObject) event).getSource()).getScene().getWindow();
-        stage.close();
+        if (user.equals("Student") && pass.equals("password")) {
+            Stage stage = (Stage) ((Node) ((EventObject) event).getSource()).getScene().getWindow();
+            stage.close();
         }
     }
 }

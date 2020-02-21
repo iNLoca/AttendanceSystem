@@ -23,11 +23,6 @@ import javafx.scene.layout.HBox;
 import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
 
-/**
- * FXML Controller class
- *
- * @author rtlop
- */
 public class WelcomeWindowController implements Initializable {
 
     @FXML
@@ -53,7 +48,6 @@ public class WelcomeWindowController implements Initializable {
         btn_close.setId("btn_close");
         lbl1.setId("lbl1");
         lbl2.setId("lbl2");
-
     }
 
     @FXML
@@ -70,7 +64,6 @@ public class WelcomeWindowController implements Initializable {
 
     @FXML
     private void clickStudent(ActionEvent event) throws IOException {
-
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/attendancesystem/gui/view/LoginStudent.fxml"));
         Parent root = loader.load();
         LoginStudentController ctrls = loader.getController();
@@ -79,12 +72,11 @@ public class WelcomeWindowController implements Initializable {
         Stage stage = new Stage();
         stage.setScene(scene);
         stage.show();
-
     }
 
     @FXML
-    private void clickClose(ActionEvent event) {    
-    Stage stage = (Stage) ((Node) ((EventObject) event).getSource()).getScene().getWindow();
-    stage.close ();
+    private void clickClose(ActionEvent event) {
+        Stage stage = (Stage) ((Node) ((EventObject) event).getSource()).getScene().getWindow();
+        stage.close();
     }
 }

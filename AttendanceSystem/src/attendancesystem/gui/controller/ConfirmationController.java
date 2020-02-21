@@ -54,8 +54,6 @@ public class ConfirmationController implements Initializable {
             Stage stage = new Stage();
             stage.setScene(scene);
             stage.show();
-
-            stage.setMaximized(true);
         }
     }
 
@@ -64,12 +62,10 @@ public class ConfirmationController implements Initializable {
         Stage stage = (Stage) ((Node) ((EventObject) event).getSource()).getScene().getWindow();
         stage.close();
     }
-    
+
     @FXML
     private void clickClose(ActionEvent event) {
         Stage stage = (Stage) ((Node) ((EventObject) event).getSource()).getScene().getWindow();
         stage.close();
-        
     }
-
 }
