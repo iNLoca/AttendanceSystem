@@ -70,47 +70,6 @@ public class StudentRecordAttendanceController implements Initializable {
         listview.getItems().add("SCO2");
         listview.getItems().add("SDE2");
     
-//        listview.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
-//            // = newValue;
-//           listview.setCellFactory(sde2 -> new JFXListCell<>());
-//           sde2.isPressed();
-           
-        //});
-
-     /*   
-      listview.listViewProperty().addListener((listObj, oldList, newList) -> {
-  if (newList != null) {
-   
-      JFXListView<String>listview newList.addListener((o, oldVal, newVal) -> {
-        
-        if (newVal.doubleValue() != 0) {
-        
-         
-          });
-      listview.selectedProperty().addListener((o, oldVal, newVal) -> {
-        if (newVal) {
-          selectionChanged = true;
-        
-     /*   
-     JFXListView<String> listview = new JFXListView<String>();
-     for(int i = 0 ; i < 4 ; i++) listview.getItems().add("sde2,sco2,dbo,ito");
-     JFXListCell<String>sde2 = new JFXListCell<String>();
-     listview.addListCell(sde2);
-    
-     listview.getStyleClass().add("StudentRecord.css");
-    /*
-     
-      listview.setOnItemSelectedListener(new listview.OnItemSelectedListener(){
-      @Override 
-      public void onItemSelected(JFXListCell<String> sde2){
-     
-     }
-     @Override
-      public void onNothingSelected(listview<?>parent){
-      
-      }
-    } );
-     */  
 
     }
     @FXML
