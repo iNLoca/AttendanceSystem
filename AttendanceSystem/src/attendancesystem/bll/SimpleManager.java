@@ -5,10 +5,25 @@
  */
 package attendancesystem.bll;
 
+import attendancesystem.dal.DAOMock;
+import be.Student;
+import java.util.List;
+
 /**
  *
  * @author mac
  */
 public class SimpleManager {
-    
+    DAOMock daoMock = new DAOMock();
+
+public List<Student> getAllStudents(){
+    List<Student> allStudents = daoMock.getAllStudents();
+    return allStudents;
+
+}
+
+
+
+
+
 }

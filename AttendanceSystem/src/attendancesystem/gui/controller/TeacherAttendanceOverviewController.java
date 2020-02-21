@@ -5,21 +5,32 @@
  */
 package attendancesystem.gui.controller;
 
+import attendancesystem.bll.SimpleManager;
+import be.Student;
+import com.jfoenix.controls.JFXDatePicker;
 import java.net.URL;
+import java.util.List;
 import java.util.ResourceBundle;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
+import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.shape.Rectangle;
 
 public class TeacherAttendanceOverviewController implements Initializable {
+    
+    SimpleManager manager = new SimpleManager();
 
     @FXML
-    private DatePicker calendar;
+    private JFXDatePicker calendar;
     @FXML
     private Label reasonForAbsence;
     @FXML
@@ -33,7 +44,9 @@ public class TeacherAttendanceOverviewController implements Initializable {
     @FXML
     private Label className;
     @FXML
-    private TableView<?> students;
+    private TableView<Student> students;
+    @FXML
+    private TableColumn<String, String> studentsColumn;
     @FXML
     private Label text2;
     @FXML
@@ -42,34 +55,50 @@ public class TeacherAttendanceOverviewController implements Initializable {
     private Label text3;
     @FXML
     private Label lblStatus;
-    private Rectangle rectangle;
+    @FXML
+    private Label lbl_popup;
 
-    /**
-     * Initializes the controller class.
-     */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        text1.getStyleClass().add("text1");
-        text2.getStyleClass().add("text2");
-        text3.getStyleClass().add("text3");
+        lbl_popup.setVisible(false);
+        text1.setVisible(false);
+        reasonForAbsence.setVisible(false);
+        text2.setVisible(false);
+        percentageOfAbsence.setVisible(false);
         text3.setId("text3");
-        calendar.getStyleClass().add("calendar");
-        exit.getStyleClass().add("exit");
         exit.setId("exit");
-        reasonForAbsence.getStyleClass().add("reasonForAbsence");
         reasonForAbsence.setId("reasonForAbsence");
-        lblStatus.getStyleClass().add("lblStatus");
-        lblStatus.setId("lblStatus");
-
-       
-       
-        percentageOfAbsence.getStyleClass().add("percentageOfAbsence");
-        teacherName.getStyleClass().add("teacherName");
-        className.getStyleClass().add("className");
         className.setId("className");
-        students.getStyleClass().add("students");
         teacherName.setId("teacherName");
-        
-    }    
-    
+        ObservableList<Student> tableItems = FXCollections.observableArrayList(manager.getAllStudents());
+        studentsColumn.setCellValueFactory(new PropertyValueFactory<>("name"));
+        students.setItems(tableItems);
+    }
+
+    @FXML
+    private void selectedStudent(MouseEvent event) {
+        String studentName= students.getSelectionModel().getSelectedItem().getName();
+        String value =calendar.getValue().toString();
+        if(studentName!=null && value!=null) {
+            if(studentName.equals("Rocio")||studentName.equals("Nadia")||studentName.equals("Francesco")){
+            text2.setVisible(true);
+            percentageOfAbsence.setVisible(true);
+            lblStatus.setId("lblStatusGreen");
+            reasonForAbsence.setText("");
+            percentageOfAbsence.setText("12");
+        }
+            else{
+            text1.setVisible(true);
+            reasonForAbsence.setVisible(true);
+            text2.setVisible(true);
+            percentageOfAbsence.setVisible(true);
+            reasonForAbsence.setText("I was sick");
+            lblStatus.setId("lblStatusRed");
+            percentageOfAbsence.setText("24");
+            }
+        }
+        else {
+         lbl_popup.setVisible(true);
+        }
+    }
 }

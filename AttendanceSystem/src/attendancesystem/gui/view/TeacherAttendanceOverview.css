@@ -55,8 +55,14 @@ and open the template in the editor.
 #className{
      -fx-text-fill: black;
 }
-#lblStatus{
+#lblStatusRed{
     -fx-background-color: red;
+    -fx-border-width: 5;
+    -fx-border-style: segments;
+     -fx-border-color: gray;
+}
+#lblStatusGreen{
+    -fx-background-color: greenyellow;
     -fx-border-width: 5;
     -fx-border-style: segments;
      -fx-border-color: gray;
