@@ -43,7 +43,7 @@
                </font>
             </Label>
             <JFXDatePicker fx:id="dp" defaultColor="#016bb2" layoutX="523.0" layoutY="101.0" prefHeight="22.0" prefWidth="246.0" />
-            <JFXButton fx:id="confirmbtn" buttonType="RAISED" layoutX="746.0" layoutY="474.0" onAction="#clickConfirm" ripplerFill="#679fffdb" style="-fx-border-color: #000000;" text="Confirm" textFill="#a6000f">
+            <JFXButton fx:id="confirmbtn" buttonType="RAISED" layoutX="746.0" layoutY="474.0" onAction="#clickConfirm" onMouseClicked="#makeConfirm" ripplerFill="#679fffdb" style="-fx-border-color: #000000;" text="Confirm" textFill="#a6000f">
                <font>
                   <Font name="Courier Bold" size="16.0" />
                </font>

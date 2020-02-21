@@ -9,12 +9,15 @@ import attendancesystem.bll.SimpleManager;
 import be.Student;
 import com.jfoenix.controls.JFXDatePicker;
 import java.net.URL;
+import java.util.EventObject;
 import java.util.List;
 import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
@@ -24,6 +27,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.shape.Rectangle;
+import javafx.stage.Stage;
 
 public class TeacherAttendanceOverviewController implements Initializable {
     
@@ -92,13 +96,18 @@ public class TeacherAttendanceOverviewController implements Initializable {
             reasonForAbsence.setVisible(true);
             text2.setVisible(true);
             percentageOfAbsence.setVisible(true);
-            reasonForAbsence.setText("I was sick");
-            lblStatus.setId("lblStatusRed");
-            percentageOfAbsence.setText("24");
+                reasonForAbsence.setText("I was sick");
+                lblStatus.setId("lblStatusRed");
+                percentageOfAbsence.setText("24");
             }
+        } else {
+            lbl_popup.setVisible(true);
         }
-        else {
-         lbl_popup.setVisible(true);
-        }
+    }
+
+    @FXML
+    private void clickClose(ActionEvent event) {
+        Stage stage = (Stage) ((Node) ((EventObject) event).getSource()).getScene().getWindow();
+        stage.close();
     }
 }

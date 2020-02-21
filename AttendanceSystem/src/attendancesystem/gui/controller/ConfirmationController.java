@@ -18,6 +18,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
 public class ConfirmationController implements Initializable {
@@ -59,8 +60,16 @@ public class ConfirmationController implements Initializable {
     }
 
     @FXML
-    private void clickClose(ActionEvent event) {
+    private void makeOverallAttendance(MouseEvent event) {
         Stage stage = (Stage) ((Node) ((EventObject) event).getSource()).getScene().getWindow();
         stage.close();
     }
+    
+    @FXML
+    private void clickClose(ActionEvent event) {
+        Stage stage = (Stage) ((Node) ((EventObject) event).getSource()).getScene().getWindow();
+        stage.close();
+        
+    }
+
 }

@@ -38,7 +38,6 @@ import javafx.stage.Stage;
  */
 public class StudentRecordAttendanceController implements Initializable {
 
-    
     @FXML
     private Label Label;
     @FXML
@@ -55,7 +54,6 @@ public class StudentRecordAttendanceController implements Initializable {
     private JFXDatePicker dp;
     @FXML
     private Label lbl_popup;
-    
 
     /**
      * Initializes the controller class.
@@ -69,15 +67,14 @@ public class StudentRecordAttendanceController implements Initializable {
         listview.getItems().add("ITO2");
         listview.getItems().add("SCO2");
         listview.getItems().add("SDE2");
-    
+
 //        listview.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
 //            // = newValue;
 //           listview.setCellFactory(sde2 -> new JFXListCell<>());
 //           sde2.isPressed();
-           
         //});
 
-     /*   
+        /*   
       listview.listViewProperty().addListener((listObj, oldList, newList) -> {
   if (newList != null) {
    
@@ -110,40 +107,42 @@ public class StudentRecordAttendanceController implements Initializable {
       
       }
     } );
-     */  
-
+         */
     }
+
     @FXML
-    private void clickPresent(ActionEvent event){
-       absentbtn.setSelected(false);
-       if(dp.getValue()==null)lbl_popup.setVisible(true);
-       else lbl_popup.setVisible(false);
+    private void clickPresent(ActionEvent event) {
+        absentbtn.setSelected(false);
+        if (dp.getValue() == null) {
+            lbl_popup.setVisible(true);
+        } else {
+            lbl_popup.setVisible(false);
+        }
     }
 
     @FXML
     private void clickAbsent(ActionEvent event) {
-        
-       
-
-       presentbtn.setSelected(false);  
-
-       absenttext.visibleProperty().bind(absentbtn.selectedProperty()); //The best line ever!!!
+        presentbtn.setSelected(false);
+        absenttext.visibleProperty().bind(absentbtn.selectedProperty()); //The best line ever!!!
     }
 
     @FXML
-    private void clickConfirm(ActionEvent event) throws IOException {
-        
-        
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/attendancesystem/gui/view/Confirmation.fxml"));
+    private void clickConfirm(ActionEvent event) throws IOException{        
+         FXMLLoader loader = new FXMLLoader(getClass().getResource("/attendancesystem/gui/view/Confirmation.fxml"));
         Parent root = loader.load();
         ConfirmationController cctrl = loader.getController();
-        
+
         Scene scene = new Scene(root);
         Stage stage = new Stage();
         stage.setScene(scene);
         stage.show();
         
-        
-   }
+    }
+
+    @FXML
+    private void makeConfirm(MouseEvent event)  {
+        Stage stage = (Stage) ((Node) ((EventObject) event).getSource()).getScene().getWindow();
+        stage.close();
+    }
 
 }

@@ -66,7 +66,6 @@ public class LoginTeacherController implements Initializable {
             wrongpass.setText("Wrong password or username");
         }
         loginT.pressedProperty();
-
     }
 
     @FXML
