@@ -46,34 +46,37 @@ public class LoginTeacherController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         wrongpass.setId("wrongpass");
-    }    
+    }
 
     @FXML
     private void makeLoginTeacher(ActionEvent event) throws IOException {
-        
+
         String username = user.getText();
         String password = pass.getText();
-        if(username.equals("Teacher")&& password.equals("password"))
-        {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/attendancesystem/gui/view/TeacherAttendanceOverview.fxml"));
-        Parent root = loader.load();
-        TeacherAttendanceOverviewController tactrl = loader.getController();
-        
-        Scene scene = new Scene(root);
-        Stage stage = new Stage();
-        stage.setScene(scene);
-        stage.show();
-        }else
+        if (username.equals("Teacher") && password.equals("password")) {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/attendancesystem/gui/view/TeacherAttendanceOverview.fxml"));
+            Parent root = loader.load();
+            TeacherAttendanceOverviewController tactrl = loader.getController();
+
+            Scene scene = new Scene(root);
+            Stage stage = new Stage();
+            stage.setScene(scene);
+            stage.show();
+        } else {
             wrongpass.setText("Wrong password or username");
-            loginT.pressedProperty();
-                                  
+        }
+        loginT.pressedProperty();
+
     }
 
     @FXML
     private void clickLogin(MouseEvent event) {
-        Stage stage = (Stage) ((Node) ((EventObject) event).getSource()).getScene().getWindow();
-        stage.close();
+        String username = user.getText();
+        String password = pass.getText();
+        if (username.equals("Teacher") && password.equals("password")) {
+            Stage stage = (Stage) ((Node) ((EventObject) event).getSource()).getScene().getWindow();
+            stage.close();
+        }
     }
 
-    
 }

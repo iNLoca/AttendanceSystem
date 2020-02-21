@@ -70,7 +70,11 @@ public class LoginStudentController implements Initializable {
 
     @FXML
     private void clickLogin(MouseEvent event) {
+        String user = username.getText();
+        String pass = password.getText();
+        if (user.equals("Student") && pass.equals("password")){
         Stage stage = (Stage) ((Node) ((EventObject) event).getSource()).getScene().getWindow();
         stage.close();
+        }
     }
 }
